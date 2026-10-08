@@ -37,7 +37,12 @@ Explain the whole procedure, KEY TO CONNECT TO THE ONLY TWO ARTICLES WRITTEN ABO
 Connection of receptors to thick section of left calve, women of BMI >25, covering rx1 and rx2 due to photosensitivity, measurements at rest, pressure, and occlusion...
 
 # NIRS Limitation (CLARA)
-Raw data is quite challenging to interpret so we developed FitScope 
+Raw data is quite challenging to interpret so we developed FitScope. The raw data that one can export after the procedure is quite challenging to understand. The exported file an excel file with thousands of data points, majority of which are not as relevant. The NIRS machine shows data on oxygenated hemoglobin, deoxygenated hemoglobin, total hemoglobin, and difference between oxygenated and deoxygenated hemoglobin every second. It gives you data recorded by each lens of each laser which would be 6 lenses meaning that every second you are getting 24 data points and the procedure is around 15 minutes total, therefore around 21600 data points. This is an incredible amount of data which is quite hard to interpret. To solve this issue of data interpretation we have developed FitScope. 
+
+Questions I have right now:
+- Each row in the data set is one second, or 10 rows is one second? 10 herts is 0.1 seconds?
+- The data only gives you the four columns or does it measure anything else?
+- How to properly explain the purpose of FitScope
 
 ## Research objective
 Take a raw Oxysoft NIRS export from a repeated-occlusion recovery-kinetics
