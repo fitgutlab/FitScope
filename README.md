@@ -8,6 +8,7 @@ For each participant this is shown to be burdensome as it requires a local anest
 
 A study that follows participants in a 12-week training program may need six measurements per participant. With biopsies, that is six incisons in the same muscle. With NIRS, it would be six short sessions. 
 
+
 # Explanation of NIRS (ANDREA)
 With two lasers, the NIRS is able to measure oxygenated hemoglobin, deoxygenated hemoglobin, total hemoglobin, difference between oxygenated and deoxygenated hemoglobin. EXPAND: explain to how those parameters are indicators of muscle health.
 
