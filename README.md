@@ -2,7 +2,9 @@
 
 # Intro (INES)
 
-A key indicator when evaluating muscle health status is by examining skeletal muscle mitochondrial capacity, in other words, how fast the muscle is able to use oxygen to regenerate ATP. Reduced oxidative capacity is shown to have direct links to chronic health problems, as well as poorer exercise performance (5). This key marker is typically measured from a muscle biopsy, a highly invasive procedure that requires an incision, a needle, a trained clinician, and a specialized lab. Once re
+A key indicator when evaluating muscle health status is by examining skeletal muscle mitochondrial capacity, in other words, how fast the muscle is able to use oxygen to regenerate ATP. Reduced oxidative capacity is shown to have direct links to chronic health problems, as well as poorer exercise performance (5). This key marker is typically measured from a muscle biopsy, a highly invasive procedure that requires an incision, a needle, a trained clinician, and a specialized lab. Once a tissue sample is incised from the patient, the muscle fibers must now be chemically treated in order to analyze the mitochondrial activity. 
+
+For each participant this is shown to be burdensome as it requires a local anesthetic, an incision in the skin, and a needle inserted into their muscle. The nature of this procedure causes many limitations. It is difficult to repeat this on the same participant, which makes tracking changes over time challenging, and in many cases, it is imperative to monitor changes to examine if muscle health is responding to training or treatment. 
 
 # Explanation of NIRS (ANDREA)
 With two lasers, the NIRS is able to measure oxygenated hemoglobin, deoxygenated hemoglobin, total hemoglobin, difference between oxygenated and deoxygenated hemoglobin. EXPAND: explain to how those parameters are indicators of muscle health.
