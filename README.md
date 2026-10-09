@@ -1,9 +1,10 @@
 ![FitScope](app/www/fitscope-logo-dark.png)
 
 # Intro (INES)
+
 Muscle biopsies are highly intrusive yet it is the only way that we use to measure 
 muscle health. A hypothesized strategy is using infrared light. etc, etc. 
-A key indicator when evaluating muscle health status is by examining skeletal muscle mitochondrial capacity, in other words, how fast the muscle is able to use oxygen to regenerate ATP. 
+A key indicator when evaluating muscle health status is by examining skeletal muscle mitochondrial capacity, in other words, how fast the muscle is able to use oxygen to regenerate ATP. Reduced oxidative capacity is shown to have direct links to chronic health problems, as well as poorer exercise performance (5). This key marker is typically measured from a muscle biopsy, a highly invasive procedure that requires an incision, a needle, a trained clinician, and a specialized lab. Once re
 
 # Explanation of NIRS (ANDREA)
 With two lasers, the NIRS is able to measure oxygenated hemoglobin, deoxygenated hemoglobin, total hemoglobin, difference between oxygenated and deoxygenated hemoglobin. EXPAND: explain to how those parameters are indicators of muscle health.
