@@ -240,8 +240,8 @@ a recording before that export exists.
 
 ## Citation
 
-Appiah, P., de Torres, C., Machaz, I., Osorio, A. & FITGut LAB. (2026).
-fitgutlab/FitScan: v1.0.0 (Version 1) [Computer software]. Zenodo.
+Appiah, P., de Torres, C., Machaz, I., Osorio, A. & Ortega-Santos, C. (2026).
+fitgutlab/FitScope: v1.0.0 (Version 1) [Computer software]. Zenodo.
 https://doi.org/10.5281/zenodo.22885722
 
 ## References 
@@ -253,4 +253,4 @@ University.
 
 ## License
 
-MIT — see [`LICENSE.md`](LICENSE.md).
+MIT — see [`LICENSE`](LICENSE).

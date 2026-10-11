@@ -1,12 +1,23 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
-title: "CanisLupus 2.0: Interactive Microbiome Data Analysis"
+title: "FitScope: NIRS-Based Estimation of Skeletal Muscle Mitochondrial Oxidative Capacity"
 authors:
   - family-names: Appiah
-    given-names: Philip Yamoah
+    given-names: Philip
     affiliation: "The George Washington University"
-    orcid: "https://orcid.org/0000-0000-0000-0000"
+  - family-names: de Torres
+    given-names: Clara
+    affiliation: "The George Washington University"
+  - family-names: Machaz
+    given-names: Ines
+    affiliation: "The George Washington University"
+  - family-names: Osorio
+    given-names: Andrea
+    affiliation: "The George Washington University"
+  - family-names: Ortega-Santos
+    given-names: Carmen
+    affiliation: "The George Washington University"
 version: 1.0.0
 date-released: 2026-09-21
 license: MIT
-repository-code: "https://github.com/fitgutlab/FitScan"
+repository-code: "https://github.com/fitgutlab/FitScope"
