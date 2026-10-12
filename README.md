@@ -117,16 +117,18 @@ reports — there's no second implementation to drift out of sync with it.
 
 ## How to use the Shiny app
  ## 1. Clone the repo 
-  git clone https://github.com/fitgutlab/FitScope.git
-  cd FitScope
+ 
+```bash
+git clone https://github.com/fitgutlab/FitScope.git
+cd FitScope
 
-  ## 2. Install R dependencies - the pipeline scripts' packages plus the app's own
+#Install R dependencies - the pipeline scripts' packages plus the app's own
   R -e 'install.packages(c("shiny","DT","base64enc","readxl","dplyr","tidyr","readr","ggplot2","patchwork"))'
 
-  ## 3. Launch the Shiny app
+#Launch the Shiny app
   cd app
   R -e 'shiny::runApp(".", launch.browser = TRUE)'
-
+```
 
 ## How to use the Claude Code plugin
 
