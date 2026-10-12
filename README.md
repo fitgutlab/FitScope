@@ -119,10 +119,48 @@ reports — there's no second implementation to drift out of sync with it.
 
 Requires R with `shiny DT base64enc readxl dplyr tidyr readr ggplot2
 patchwork`.
-
+install and load the required R pacakages:
 ```bash
-cd app
-R -e 'shiny::runApp(".")'
+packages <- c(
+  "shiny",
+  "DT",
+  "base64enc",
+  "readxl",
+  "dplyr",
+  "tidyr",
+  "readr",
+  "ggplot2",
+  "patchwork"
+)
+```
+load the packages:
+# Install packages (run once)
+install.packages(c(
+  "shiny",
+  "DT",
+  "base64enc",
+  "readxl",
+  "dplyr",
+  "tidyr",
+  "readr",
+  "ggplot2",
+  "patchwork"
+))
+
+# Load packages (run each new R session)
+library(shiny)
+library(DT)
+library(base64enc)
+library(readxl)
+library(dplyr)
+library(tidyr)
+library(readr)
+library(ggplot2)
+library(patchwork)
+```bash
+# On the terminal locate the directory/folder that has the shinny app
+cd app 
+R -e 'shiny::runApp(".", launch.browser = TRUE)'
 ```
 
 The sidebar's "R package check" table shows anything missing before you try
