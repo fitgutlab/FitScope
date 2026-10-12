@@ -115,7 +115,7 @@ Both shell out to `Rscript` against the three scripts above, unmodified. If
 you've read `clean_nirs.R` and trust it, you can trust what either front end
 reports — there's no second implementation to drift out of sync with it.
 
-## How to use the Shiny app
+## How to use the Shiny app & Install R dependencies & Launch the Shiny app
  ## 1. Clone the repo 
  
 ```bash
