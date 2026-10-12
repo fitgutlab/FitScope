@@ -115,60 +115,20 @@ Both shell out to `Rscript` against the three scripts above, unmodified. If
 you've read `clean_nirs.R` and trust it, you can trust what either front end
 reports — there's no second implementation to drift out of sync with it.
 
-## Install — Shiny app
+## How to use the Shiny app
+ ## 1. Clone the repo 
+  git clone https://github.com/fitgutlab/FitScope.git
+  cd FitScope
 
-Requires R with `shiny DT base64enc readxl dplyr tidyr readr ggplot2
-patchwork`.
-install and load the required R pacakages:
-```bash
-packages <- c(
-  "shiny",
-  "DT",
-  "base64enc",
-  "readxl",
-  "dplyr",
-  "tidyr",
-  "readr",
-  "ggplot2",
-  "patchwork"
-)
-```
-load the packages:
-## Install packages (run once)
-install.packages(c(
-  "shiny",
-  "DT",
-  "base64enc",
-  "readxl",
-  "dplyr",
-  "tidyr",
-  "readr",
-  "ggplot2",
-  "patchwork"
-))
+  ## 2. Install R dependencies - the pipeline scripts' packages plus the app's own
+  R -e 'install.packages(c("shiny","DT","base64enc","readxl","dplyr","tidyr","readr","ggplot2","patchwork"))'
 
-## Load packages (run each new R session)
-library(shiny)
-library(DT)
-library(base64enc)
-library(readxl)
-library(dplyr)
-library(tidyr)
-library(readr)
-library(ggplot2)
-library(patchwork)
-```bash
-# On the terminal locate the directory/folder that has the shinny app
-cd app 
-R -e 'shiny::runApp(".", launch.browser = TRUE)'
-```
+  ## 3. Launch the Shiny app
+  cd app
+  R -e 'shiny::runApp(".", launch.browser = TRUE)'
 
-The sidebar's "R package check" table shows anything missing before you try
-to run a step. Point **Project directory** at wherever your raw `.xlsx`
-exports live (or let it use a scratch `workspace/` next to the app), upload or
-pick a file, and run the pipeline step by step or all at once.
 
-## Install — Claude Code plugin
+## How to use the Claude Code plugin
 
 ### 1. What you need first
 
