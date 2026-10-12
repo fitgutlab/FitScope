@@ -134,7 +134,7 @@ packages <- c(
 )
 ```
 load the packages:
-# Install packages (run once)
+## Install packages (run once)
 install.packages(c(
   "shiny",
   "DT",
@@ -147,7 +147,7 @@ install.packages(c(
   "patchwork"
 ))
 
-# Load packages (run each new R session)
+## Load packages (run each new R session)
 library(shiny)
 library(DT)
 library(base64enc)
