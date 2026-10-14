@@ -12,6 +12,39 @@ Due to the simplicity of the procedure, NIRS can be repeated as often as needed,
 
 A study that follows participants in a 12-week training program needs six measurements per participant. With biopsies, that is six incisions in the same muscle. With NIRS, it would be six short sessions of about 15 minutes each without ever breaking the skin. 
 
+Holloway, G. P., Thrush, A. B., Heigenhauser, G. J. F., Tandon, N. N.,
+Dyck, D. J., Bonen, A., & Spriet, L. L. (2007). Skeletal muscle
+mitochondrial FAT/CD36 content and palmitate oxidation are not decreased
+in obese women. *American Journal of Physiology-Endocrinology and
+Metabolism, 292*(6), E1782–E1789.
+
+Maliszewski, K., Feldmann, A., McCully, K. K., & Julian, R. (2024). A
+systematic review of the relationship between muscle oxygen dynamics
+and energy rich phosphates. Can NIRS help? *BMC Sports Science, Medicine
+and Rehabilitation, 16*, Article 25.
+https://doi.org/10.1186/s13102-024-00809-5
+
+Ross, L., McKelvie, P., Reardon, K., & Day, B. J. (2023). Muscle biopsy
+practices in the evaluation of neuromuscular disease: A systematic
+literature review. *Neuropathology and Applied Neurobiology, 49*(1),
+Article e12888. https://doi.org/10.1111/nan.12888
+
+Ryan, T. E., Brophy, P., Lin, C.-T., Hickner, R. C., & Neufer, P. D.
+(2014). Assessment of in vivo skeletal muscle mitochondrial respiratory
+capacity in humans by near-infrared spectroscopy: A comparison with in
+situ measurements. *The Journal of Physiology, 592*(15), 3231–3241.
+https://doi.org/10.1113/jphysiol.2014.274456
+
+Ryan, T. E., Southern, W. M., Reynolds, M. A., & McCully, K. K. (2013).
+A cross-validation of near-infrared spectroscopy measurements of
+skeletal muscle oxidative capacity with phosphorus magnetic resonance
+spectroscopy. *Journal of Applied Physiology, 115*(12), 1757–1766.
+https://doi.org/10.1152/japplphysiol.00835.2013
+
+Toledo, F. G. S., & Goodpaster, B. H. (2013). The role of weight loss
+and exercise in correcting skeletal muscle mitochondrial abnormalities
+in obesity, diabetes and aging. *Molecular and Cellular Endocrinology,
+379*(1–2), 30–34.
 
 # Explanation of NIRS (ANDREA)
 With two lasers, the NIRS is able to measure oxygenated hemoglobin, deoxygenated hemoglobin, total hemoglobin, difference between oxygenated and deoxygenated hemoglobin. EXPAND: explain to how those parameters are indicators of muscle health.
