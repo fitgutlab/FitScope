@@ -62,13 +62,20 @@ Explain the whole procedure, KEY TO CONNECT TO THE ONLY TWO ARTICLES WRITTEN ABO
   the time constant of recovery, and `k = 1/Tc`.]
 Connection of receptors to thick section of left calve, women of BMI >25, covering rx1 and rx2 due to photosensitivity, measurements at rest, pressure, and occlusion...
 
-NIRS is a straightforward procedure. We initiate by having the participant lie down, legs extended and relaxed. The NIRS probes Rx1 and Rx2 are placed on the thickest parts of the lateral (Rx_) and medial (Rx_) sides of the calve, and due to their high light sensitivity we must wrap the probes in dark athletic tape. Placing the probes here allows us to obtain a more reliable signal as there's more muscle under the sensor and allows for consistent placement (Ryan et al., 2012). A blood pressure cuff is placed on the thigh of the same leg to cut blood and oxygen flow to the sensors for a brief period during the procedure.
+Near infrared spectroscopy (NIRS) is a straightforward procedure. We initiate by having the participant lie down, legs extended and relaxed. The NIRS probes Rx1 and Rx2 are placed on the thickest parts of the lateral (Rx_) and medial (Rx_) sides of the calf, and due to their high light sensitivity we wrap the probes in dark athletic tape. Placing the probes here allows us to obtain a more reliable signal as there's more muscle under the sensor and allows for consistent placement (Ryan et al., 2012). A blood pressure cuff is placed on the thigh of the same leg to cut blood and oxygen flow to the sensors for a brief period during the procedure.
+
+We start off the test with a two minute resting measurement. The cuff is then inflated for 30 seconds to cut oxygen supply to the muscle, while NIRS continues to measure O2Hb and HHb signals. The slope of the HHb signal during this occlusion helps measure the resting mVO2 baseline value (Ryan et al., 2014). 
+
+After letting hemoglobin values return to baseline we have 
 Questions: 
 Why women of high BMI?
+Is there a specific pressure that we inflate the cuff to, especially during the 30 second occlusion?
 
-file:///C:/Users/osori/Downloads/Ryan_Neufer.JPhysiol.2014_NIRS.1.pdf 
+Ryan, T. E., Brophy, P., Lin, C.-T., Hickner, R. C., & Neufer, P. D. (2014). Assessment of in vivo skeletal muscle mitochondrial respiratory capacity in humans by near-infrared spectroscopy: A comparison with in situ measurements. The Journal of Physiology, 592(15), 3231-3241. https://doi.org/10.1113/jphysiol.2014.274456
 
-file:///C:/Users/osori/Downloads/Ryan.TE.2012_NIRES.1.pdf 
+
+Ryan, T. E., Erickson, M. L., Brizendine, J. T., Young, H.-J., & McCully, K. K. (2012). Noninvasive evaluation of skeletal muscle mitochondrial capacity with near-infrared spectroscopy: Correcting for blood volume changes. Journal of Applied Physiology, 113(2), 175-183. https://doi.org/10.1152/japplphysiol.00319.2012
+
 
 # NIRS Limitation (CLARA)
 The raw data given by the NIRS is quite challenging to interpret. Technically the actual values shown in the raw data do not mean anything, instead oxidative capacity is calculated using changes in slope, meaning high levels of data cleaning and analysis is required. In prior research studies, its authors used MATLAB, which is a programming language that requires a significant amount of prior knowledge to be able to use it. The need to use MATLAB stems from the fact that raw data comes with thousands of data points, majority of which are not as relevant (Tandirerung et al, 2024). The NIRS machine records data every .1 seconds and there are 6 lens that record data hence thousands and thousands of data points are recorded. To solve this issue of data interpretation we have developed FitScope. A tool that will clean, analyze, and visualize raw NIRS data. In addition to building an app we also developed a Claude Code plugin. This is especially significant because it does not require users to even download R studio or Visual Studio Code. Users just need to download their raw data and upload it to their Claude account.   
