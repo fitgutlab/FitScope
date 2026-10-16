@@ -134,6 +134,20 @@ clean and analyse Practice12.xlsx, is the Tc trustworthy? #This is a sample prom
 | `<id>_recovery_fit.csv` | Rest, Delta, End, **Tc**, **k**, R², `converged` |
 | `<id>_fig1..fig5.png`, `<id>_fig6_mvo2_recovery_fit.png` | the six figures |
 
+---
+<div align="center">
+  <img src="https://github.com/fitgutlab/FitScope/main/www/practice_4_plots.png" />
+  <img src="https://github.com/fitgutlab/FitScope/main/www/practice_4_fig2_recovery_series.png" width="45%" />
+  <img src="https://github.com/fitgutlab/FitScope/main/www/practice_4_fig3_cuff_magnification.png" width="45%" />
+  <img src="https://github.com/fitgutlab/FitScope/main/www/practice_4_fig4_resting_occlusion.png" width="45%" />
+  <img src="https://github.com/fitgutlab/FitScope/main/www/practice_4_fig5_probe_comparison.png" width="45%" />
+  <img src="https://github.com/fitgutlab/FitScope/edit/main/www/practice_4_fig6_mvo2_recovery_fit.png" width="45%" />
+  <img src="https://github.com/fitgutlab/FitScope/main/www/practice_4_fig1_protocol_overview.png" width="45%" />
+  <img src="https://github.com/fitgutlab/FitScope/main/www/mOv.png" width="45%" />
+</div>
+
+
+---
 
 ## Citation
 
