@@ -1,6 +1,6 @@
 ![FitScope](app/www/fitscope-logo-dark.png)
 
-# Intro (INES)
+# Introduction
 
 A key indicator when evaluating muscle health status is by examining skeletal muscle mitochondrial capacity, in other words, how fast the muscle is able to use oxygen to regenerate ATP. Reduced oxidative capacity is shown to have direct links to chronic health problems, as well as poorer exercise performance (Maliszewski et al., 2024). This key marker is typically measured from a muscle biopsy, an invasive procedure that requires a 1-2 centimeter incision, a needle, a trained clinician, and a specialized lab (Ross et al., 2023). Once a tissue sample is incised from the patient, the muscle fibers must now be chemically treated and examined using a high-resolution respirometry while the tissue is fresh, in order to analyze the mitochondrial activity (Ryan et al., 2014).
 
