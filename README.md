@@ -53,7 +53,9 @@ Near-infrared spectroscopy (NIRS) is a noninvasive way to see how well oxygen is
 The method works by tracking oxygenated and deoxygenated hemoglobin. Hemoglobin loaded with oxygen travels from the lungs out to the tissues, and once it has dropped off its oxygen, it returns to be refilled. Oxygen-rich (O2Hb) and oxygen-poor (HHb) hemoglobin absorb near-infrared light differently, so the NIRS system can work out the balance between the two forms by comparing how much light comes back at specific wavelengths (Cheatham Lab, n.d.). Muscle occlusions pull oxygen out of the blood, causing the O2Hb signal to drop and the HHb signal to rise. How fast this happens during exercise and how quickly it recovers afterward gives a picture of mitochondrial efficiency.
 
 Cheatham Lab. (n.d.). Near-infrared spectroscopy. https://cheathamlab.com/index.php/near-infrared-spectroscopy/
+
 Marin, T., & Moore, J. (2011). Understanding near-infrared spectroscopy. Advances in Neonatal Care, 11(6), 382-388. https://pubmed.ncbi.nlm.nih.gov/22123468/
+
 Pavlek, L. R., Mueller, C., Jebbia, M. R., Kielt, M. J., & Fathi, O. (2021). Near-infrared spectroscopy in extremely preterm infants. Frontiers in Pediatrics, 8. https://doi.org/10.3389/fped.2020.624113
 
 # NIRS Procedure (ANDREA)
