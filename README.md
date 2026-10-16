@@ -138,7 +138,7 @@ clean and analyse Practice12.xlsx, is the Tc trustworthy? #This is a sample prom
 ---
 <div align="center">
 
-  <img src="https://raw.githubusercontent.com/fitgutlab/FitScope/main/www/practice_4_plots.png" width="90%" alt="Practice 4 plots" width="45%" alt="Recovery series2" />
+  <img src="https://raw.githubusercontent.com/fitgutlab/FitScope/main/www/practice_4_plots.png" width="45%" alt="Practice 4 plots" width="45%" alt="Recovery series2" />
 
   <img src="https://raw.githubusercontent.com/fitgutlab/FitScope/main/www/practice_4_fig2_recovery_series.png" width="45%" alt="Recovery series" />
   <img src="https://raw.githubusercontent.com/fitgutlab/FitScope/main/www/practice_4_fig3_cuff_magnification.png" width="45%" alt="Cuff magnification" />
@@ -148,8 +148,6 @@ clean and analyse Practice12.xlsx, is the Tc trustworthy? #This is a sample prom
 
   <img src="https://raw.githubusercontent.com/fitgutlab/FitScope/main/www/practice_4_fig6_mvo2_recovery_fit.png" width="45%" alt="MVO2 recovery fit" />
   <img src="https://raw.githubusercontent.com/fitgutlab/FitScope/main/www/practice_4_fig1_protocol_overview.png" width="45%" alt="Protocol overview" />
-
-  <img src="https://raw.githubusercontent.com/fitgutlab/FitScope/main/www/mOv.png" width="45%" alt="MVO2 plot" />
 
 </div>
 
