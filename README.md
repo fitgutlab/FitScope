@@ -58,7 +58,7 @@ Ryan, T. E., Erickson, M. L., Brizendine, J. T., Young, H.-J., & McCully, K. K. 
 
 # NIRS Procedure (ANDREA)
 
-Near infrared spectroscopy (NIRS) is a straightforward procedure. Our participant demographics are women ages 18-60 with a BMI >25. Previous studies (Ryan et al., 2012; Ryan et al., 2014) have tested the viability of using NIRS as a substitute for muscle biopsies, however we do not yet know whether NIRS is able to reliably capture mitochondrial efficiency in women with overweight or obesity.
+Near-infrared spectroscopy (NIRS) is a straightforward procedure. Our participant demographics are women of ages 18-60 with a BMI >25. Previous studies (Ryan et al., 2012; Ryan et al., 2014) have tested the viability of using NIRS as a substitute for muscle biopsies, however we do not yet know whether NIRS is able to reliably capture mitochondrial efficiency in women with overweight or obesity.
 
 We initiate by having the participant lie down, legs extended and relaxed. The NIRS probes Rx1 and Rx2 are placed on the thickest parts of the lateral (Rx_) and medial (Rx_) sides of the calf, and due to their high light sensitivity we wrap both probes in dark athletic tape. Placing the probes here allows us to obtain a more reliable signal due to the higher presence of muscle under the sensor, and allowing for consistent placement (Ryan et al., 2012). A blood pressure cuff is placed on the thigh of the same leg to cut blood and oxygen flow to the sensors for a brief period during the procedure.
 
