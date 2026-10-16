@@ -47,27 +47,6 @@ in obesity, diabetes and aging. *Molecular and Cellular Endocrinology,
 379*(1–2), 30–34.
 
 # Explanation of NIRS (ANDREA)
-With two lasers, the NIRS is able to measure oxygenated hemoglobin, deoxygenated hemoglobin, total hemoglobin, difference between oxygenated and deoxygenated hemoglobin. EXPAND: explain to how those parameters are indicators of muscle health.
-
-Ideas written by Philip: [What NIRS measures, and why occlusion
-"Near-infrared light (roughly 700–900 nm) penetrates skin, fat and a few
-centimetres of muscle, and is absorbed differently depending on how much of
-the local haemoglobin/myoglobin pool is carrying oxygen. Measuring
-attenuation at several wavelengths gives a continuous, non-invasive readout
-of oxygenated (**O2Hb**) versus deoxygenated (**HHb**) haemoglobin/myoglobin
-in the muscle under the sensor — in real time, with nothing drawn and nothing
-inserted.
-On its own that signal reflects a balance of two things happening at once:
-how fast oxygen is being *delivered* (blood flow) and how fast it's being
-*consumed* (mitochondrial respiration). Arterial occlusion separates them.
-Inflating a pneumatic cuff above systolic pressure over the limb stops
-arterial inflow entirely: no oxygen arrives, and consumption continues. For
-the few seconds the cuff is up, the **slope** of HHb rising (or O2Hb falling)
-is therefore a direct, blood-flow-independent readout of muscle oxygen
-consumption — **mV̇O2**.
-A smaller Tc means faster recovery and greater mitochondrial oxidative
-capacity. It's a well-validated, repeatable, non-invasive proxy for
-mitochondrial function in the specific muscle studied, in place of a biopsy."]
 
 Near-infrared spectroscopy (NIRS) is a noninvasive way to see how well oxygen is reaching a tissue, without cutting into the body or taking a sample. A sensor sits on the skin and sends  near-infrared light to the tissue underneath. Some of that light is absorbed along the way, and the rest scatters back to a detector on the sensor. Because the sensor can keep reading for as long as it stays in place, it follows oxygen levels in real time (Marin & Moore, 2011). It has mostly been used in hospitals to watch blood flow in organs like the brain, gut, and kidneys, where it helps flag problems early. That same ability to track oxygen continuously makes it a promising, less invasive alternative to a muscle biopsy for judging muscle health. The light also reaches a useful depth. It has been detected several centimeters into tissue, and the readings typically reflect the first 1-2 cm below the sensor (Pavlek et al., 2021).
 
@@ -82,6 +61,10 @@ Explain the whole procedure, KEY TO CONNECT TO THE ONLY TWO ARTICLES WRITTEN ABO
  Ideas written by Philip: [- One occlusion at **rest** gives resting mV̇O2. - A rapid series of these occlusions **after exercise** tracks mV̇O2 as it decays back toward the resting value. A muscle with greater mitochondrial oxidative capacity resynthesizes ATP — and so returns oxygen consumption to baseline — faster, so its recovery curve decays faster. - Fitting that decay to `mV̇O2(t) = Rest + Delta · e^(−t/Tc)` yields **Tc**,
   the time constant of recovery, and `k = 1/Tc`.]
 Connection of receptors to thick section of left calve, women of BMI >25, covering rx1 and rx2 due to photosensitivity, measurements at rest, pressure, and occlusion...
+
+NIRS is a straightforward procedure. We initiate by having the participant lie down, legs extended and relaxed. The NIRS probes Rx1 and Rx2 are placed on the thickest parts of the lateral (Rx_) and medial (Rx_) sides of the calve, and due to their high light sensitivity we must wrap the probes in dark athletic tape. Placing the probes here allows us to obtain a more reliable signal as there's more muscle under the sensor and allows for consistent placement (Ryan et al., 2012). A blood pressure cuff is placed on the thigh of the same leg to cut blood and oxygen flow to the sensors for a brief period during the procedure.
+Questions: 
+Why women of high BMI?
 
 file:///C:/Users/osori/Downloads/Ryan_Neufer.JPhysiol.2014_NIRS.1.pdf 
 
