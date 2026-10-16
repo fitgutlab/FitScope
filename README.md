@@ -84,6 +84,7 @@ Explain the whole procedure, KEY TO CONNECT TO THE ONLY TWO ARTICLES WRITTEN ABO
 Connection of receptors to thick section of left calve, women of BMI >25, covering rx1 and rx2 due to photosensitivity, measurements at rest, pressure, and occlusion...
 
 file:///C:/Users/osori/Downloads/Ryan_Neufer.JPhysiol.2014_NIRS.1.pdf 
+
 file:///C:/Users/osori/Downloads/Ryan.TE.2012_NIRES.1.pdf 
 
 # NIRS Limitation (CLARA)
