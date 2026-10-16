@@ -62,7 +62,7 @@ Near infrared spectroscopy (NIRS) is a straightforward procedure. Our participan
 
 We initiate by having the participant lie down, legs extended and relaxed. The NIRS probes Rx1 and Rx2 are placed on the thickest parts of the lateral (Rx_) and medial (Rx_) sides of the calf, and due to their high light sensitivity we wrap both probes in dark athletic tape. Placing the probes here allows us to obtain a more reliable signal due to the higher presence of muscle under the sensor, and allowing for consistent placement (Ryan et al., 2012). A blood pressure cuff is placed on the thigh of the same leg to cut blood and oxygen flow to the sensors for a brief period during the procedure.
 
-We start off the test with a two minute resting measurement. The cuff is then inflated at around 240 mm HG for 30 seconds to cut oxygen supply to the muscle, while NIRS continues to measure O2Hb and HHb signals. The slope of the HHb signal during this occlusion helps measure the resting muscle oxygen consumption (mVO2) baseline value (Ryan et al., 2014). 
+We start off the test with a two minute resting measurement. The cuff is then inflated to around 240 mm HG for 30 seconds to cut oxygen supply to the muscle, while NIRS continues to measure O2Hb and HHb signals. The slope of the HHb signal during this occlusion helps measure the resting muscle oxygen consumption (mVO2) baseline value (Ryan et al., 2014). 
 
 After letting hemoglobin values return to baseline we have the participant perform steady plantar flexions to a metronome pace of _bpm for 30 seconds. Transient occlusions are then performed every 8 seconds via cuff inflation over a duration of 3 minutes. 
 
