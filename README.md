@@ -48,15 +48,13 @@ in obesity, diabetes and aging. *Molecular and Cellular Endocrinology,
 
 # Explanation of NIRS (ANDREA)
 
-Near-infrared spectroscopy (NIRS) is a noninvasive way to see how well oxygen is reaching a tissue, without cutting into the body or taking a sample. A sensor sits on the skin and sends near-infrared light to the tissue underneath. Some of that light is absorbed along the way, and the rest scatters back to a detector on the sensor. Because the sensor can keep reading for as long as it stays in place, it follows oxygen levels in real time (Marin & Moore, 2011). It has mostly been used in hospitals to watch blood flow in organs like the brain, gut, and kidneys, where it helps flag problems early. That same ability to track oxygen continuously makes it a promising, less invasive alternative to a muscle biopsy for judging muscle health. The light also reaches a useful depth. It has been detected several centimeters into tissue, and the readings typically reflect the first 1-2 cm below the sensor (Pavlek et al., 2021).
+Near-infrared spectroscopy (NIRS) is a noninvasive way of measuring mitochondrial functioning through hemoglobin/myoglobin oxygenation, without cutting into the body or taking a sample. A sensor sits on the skin and sends near-infrared light to the tissue underneath where it scatters back to a detector on the sensor. Oxygenated (O2Hb) and deoxygenated (HHb) hemoglobin absorb near-infrared light at different levels, allowing the NIRS system to measure how much light is returning to the detectors and record changes in muscle oxygenation (Cheatham Lab, 2014). NIRS also provides the sum of these two signals as total hemoglobin (tHb), reflecting blood volume under the sensors. Because NIRS reflects oxygen delivered and consumed at once, a blood pressure cuff (pumped to above systolic blood pressure) stops arterial blood flow, allowing only oxygen consumption to be recorded at that moment (Ryan et al., 2012; Ryan et al., 2014). O2Hb falls and HHb rises during this event, and the slope of this change is the muscle's oxygen consumption (mVO2). Plotting these slopes post-exercise allows us to assess mitochondrial capacity (Ryan et al., 2014), which will be explained more thoroughly in the following section.
 
-The method works by tracking oxygenated and deoxygenated hemoglobin. Hemoglobin loaded with oxygen travels from the lungs out to the tissues, and once it has dropped off its oxygen, it returns to be refilled. Oxygen-rich (O2Hb) and oxygen-poor (HHb) hemoglobin absorb near-infrared light differently, so the NIRS system can work out the balance between the two forms by comparing how much light comes back at specific wavelengths (Cheatham Lab, n.d.), and the sum of both of these signals is shown as total hemoglobin (tHb), telling us the amount of blood under the sensor. Muscle occlusions pull oxygen out of the blood, causing the O2Hb signal to drop and the HHb signal to rise. How fast this happens during exercise and how quickly it recovers afterward gives a picture of mitochondrial efficiency.
+Cheatham Lab. (2014). Near-infrared spectroscopy. https://cheathamlab.com/index.php/near-infrared-spectroscopy/
 
-Cheatham Lab. (n.d.). Near-infrared spectroscopy. https://cheathamlab.com/index.php/near-infrared-spectroscopy/
+Ryan, T. E., Brophy, P., Lin, C.-T., Hickner, R. C., & Neufer, P. D. (2014). Assessment of in vivo skeletal muscle mitochondrial respiratory capacity in humans by near-infrared spectroscopy: A comparison with in situ measurements. The Journal of Physiology, 592(15), 3231-3241. https://doi.org/10.1113/jphysiol.2014.274456
 
-Marin, T., & Moore, J. (2011). Understanding near-infrared spectroscopy. Advances in Neonatal Care, 11(6), 382-388. https://pubmed.ncbi.nlm.nih.gov/22123468/
-
-Pavlek, L. R., Mueller, C., Jebbia, M. R., Kielt, M. J., & Fathi, O. (2021). Near-infrared spectroscopy in extremely preterm infants. Frontiers in Pediatrics, 8. https://doi.org/10.3389/fped.2020.624113
+Ryan, T. E., Erickson, M. L., Brizendine, J. T., Young, H.-J., & McCully, K. K. (2012). Noninvasive evaluation of skeletal muscle mitochondrial capacity with near-infrared spectroscopy: Correcting for blood volume changes. Journal of Applied Physiology, 113(2), 175-183. https://doi.org/10.1152/japplphysiol.00319.2012
 
 # NIRS Procedure (ANDREA)
 
@@ -64,15 +62,15 @@ Near infrared spectroscopy (NIRS) is a straightforward procedure. Our participan
 
 We initiate by having the participant lie down, legs extended and relaxed. The NIRS probes Rx1 and Rx2 are placed on the thickest parts of the lateral (Rx_) and medial (Rx_) sides of the calf, and due to their high light sensitivity we wrap both probes in dark athletic tape. Placing the probes here allows us to obtain a more reliable signal due to the higher presence of muscle under the sensor, and allowing for consistent placement (Ryan et al., 2012). A blood pressure cuff is placed on the thigh of the same leg to cut blood and oxygen flow to the sensors for a brief period during the procedure.
 
-We start off the test with a two minute resting measurement. The cuff is then inflated at around 240 mm HG for 30 seconds to cut oxygen supply to the muscle, while NIRS continues to measure O2Hb and HHb signals. The slope of the HHb signal during this occlusion helps measure the resting mVO2 baseline value (Ryan et al., 2014). 
+We start off the test with a two minute resting measurement. The cuff is then inflated at around 240 mm HG for 30 seconds to cut oxygen supply to the muscle, while NIRS continues to measure O2Hb and HHb signals. The slope of the HHb signal during this occlusion helps measure the resting muscle oxygen consumption (mVO2) baseline value (Ryan et al., 2014). 
 
-After letting hemoglobin values return to baseline we have the participant perform steady plantar flexions to with a metronome pace of _bpm for 30 seconds. Transient occlusions are then performed every 8 seconds via cuff inflation over a duration of 3 minutes. 
+After letting hemoglobin values return to baseline we have the participant perform steady plantar flexions to a metronome pace of _bpm for 30 seconds. Transient occlusions are then performed every 8 seconds via cuff inflation over a duration of 3 minutes. 
 
 Each occlusion shows a slope representing mVO2, which gives us a picture of oxygen consumption through a curve of decay when they are plotted together. Fitting this curve with the equation:
 
 **mV̇O₂(t) = Rest + Delta · e^(−t/Tc)**
 
-This equation yields **Tc**, which is the time constant of recovery: a number telling us the speed at which mVO2 falls back to resting levels post-exercise. Tc is tied to the **rate constant k=1/Tc**, meaning that lower Tc/higher k values correspond to faster muscle recovery (Ryan et al., 2014). Biologically, faster muscle recovery reflects greater mitochondrial respiratory capacity.
+yields **Tc**, which is the time constant of recovery: a number telling us the speed at which mVO2 falls back to resting levels post-exercise. Tc is tied to the **rate constant k=1/Tc**, meaning that lower Tc/higher k values correspond to faster muscle recovery (Ryan et al., 2014). Biologically, faster muscle recovery reflects greater mitochondrial respiratory capacity.
 
 Questions: 
 
@@ -83,7 +81,6 @@ Which Rx probes go where?
 Is my incorporation of the two articles good or should I reference them more specifically?
 
 Ryan, T. E., Brophy, P., Lin, C.-T., Hickner, R. C., & Neufer, P. D. (2014). Assessment of in vivo skeletal muscle mitochondrial respiratory capacity in humans by near-infrared spectroscopy: A comparison with in situ measurements. The Journal of Physiology, 592(15), 3231-3241. https://doi.org/10.1113/jphysiol.2014.274456
-
 
 Ryan, T. E., Erickson, M. L., Brizendine, J. T., Young, H.-J., & McCully, K. K. (2012). Noninvasive evaluation of skeletal muscle mitochondrial capacity with near-infrared spectroscopy: Correcting for blood volume changes. Journal of Applied Physiology, 113(2), 175-183. https://doi.org/10.1152/japplphysiol.00319.2012
 
