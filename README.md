@@ -75,9 +75,12 @@ Each occlusion shows a slope representing mVO2, which gives us a picture of oxyg
 This equation yields **Tc**, which is the time constant of recovery: a number telling us the speed at which mVO2 falls back to resting levels post-exercise. Tc is tied to the **rate constant k=1/Tc**, meaning that lower Tc/higher k values correspond to faster muscle recovery (Ryan et al., 2014). Biologically, faster muscle recovery reflects greater mitochondrial respiratory capacity.
 
 Questions: 
+
 What is the bpm at which they flex their foot?
 
-How should I further incorporate the two articles written by NIRS?
+Which Rx probes go where?
+
+Is my incorporation of the two articles good or should I reference them more specifically?
 
 Ryan, T. E., Brophy, P., Lin, C.-T., Hickner, R. C., & Neufer, P. D. (2014). Assessment of in vivo skeletal muscle mitochondrial respiratory capacity in humans by near-infrared spectroscopy: A comparison with in situ measurements. The Journal of Physiology, 592(15), 3231-3241. https://doi.org/10.1113/jphysiol.2014.274456
 
