@@ -12,6 +12,139 @@ Due to the simplicity of the procedure, NIRS can be repeated as often as needed,
 
 A study that follows participants in a 12-week training program needs six measurements per participant. With biopsies, that is six incisions in the same muscle. With NIRS, it would be six short sessions of about 15 minutes each without ever breaking the skin. 
 
+Intro about FitScope: The raw data given by the NIRS is quite challenging to interpret. Technically the actual values shown in the raw data do not mean anything, instead oxidative capacity is calculated using changes in slope, meaning high levels of data cleaning and analysis is required. In prior research studies, its authors used MATLAB, which is a programming language that requires a significant amount of prior knowledge to be able to use it. The need to use MATLAB stems from the fact that raw data comes with thousands of data points, majority of which are not as relevant (Tandirerung et al, 2024). The NIRS machine records data every .1 seconds and there are 6 lens that record data hence thousands and thousands of data points are recorded. To solve this issue of data interpretation we have developed FitScope. A tool that will clean, analyze, and visualize raw NIRS data. In addition to building an app we also developed a Claude Code plugin. This is especially significant because it does not require users to even download R studio or Visual Studio Code. Users just need to download their raw data and upload it to their Claude account.   
+
+## Research objective
+Take a raw Oxysoft NIRS export from a repeated-occlusion recovery-kinetics
+protocol and produce a **trustworthy** Tc (and k) for each subject — the
+operative word being *trustworthy*, because, per above, a converged fit is
+not automatically one. The pipeline this repository ships was specified
+decision-by-decision by the lab's data owner (recorded in
+`data_cleaning_transcript.md` and `NIRS_Pipeline_Questions_and_Challenges.docx`),
+not derived or guessed at, and the two front ends below exist to run that
+exact pipeline without ever reimplementing it.
+
+# NIRS Overview
+
+Near-infrared spectroscopy (NIRS) is a noninvasive way of measuring mitochondrial functioning through hemoglobin/myoglobin oxygenation, without cutting into the body or taking a sample. A sensor sits on the skin and sends near-infrared light to the tissue underneath where it scatters back to a detector on the sensor. Oxygenated (O2Hb) and deoxygenated (HHb) hemoglobin absorb near-infrared light at different levels, allowing the NIRS system to measure how much light is returning to the detectors and record changes in muscle oxygenation (Cheatham Lab, 2014). NIRS also provides the sum of these two signals as total hemoglobin (tHb), reflecting blood volume under the sensors. Because NIRS reflects oxygen delivered and consumed at once, a blood pressure cuff (pumped to above systolic blood pressure) stops arterial blood flow, allowing only oxygen consumption to be recorded at that moment (Ryan et al., 2012; Ryan et al., 2014). O2Hb falls and HHb rises during this event, and the slope of this change is the muscle's oxygen consumption (mVO2). Plotting these slopes post-exercise allows us to assess mitochondrial capacity (Ryan et al., 2014), which will be explained more thoroughly in the following section.
+
+# NIRS Procedure 
+
+Near-infrared spectroscopy (NIRS) is a straightforward procedure. Our participant demographics are women of ages 18-60 with a BMI >25. Previous studies (Ryan et al., 2012; Ryan et al., 2014) have tested the viability of using NIRS as a substitute for muscle biopsies, however we do not yet know whether NIRS is able to reliably capture mitochondrial efficiency in women with overweight or obesity.
+
+We initiate by having the participant lie down, legs extended and relaxed. The NIRS probes Rx1 and Rx2 are placed on the thickest parts of the lateral (Rx1) and medial (Rx2) sides of the calf, and due to their high light sensitivity we wrap both probes in dark athletic tape. Placing the probes here allows us to obtain a more reliable signal due to the higher presence of muscle under the sensor, and allowing for consistent placement (Ryan et al., 2012). A blood pressure cuff is placed on the thigh of the same leg to cut blood and oxygen flow to the sensors for a brief period during the procedure.
+
+We start off the test with a two minute resting measurement. The cuff is then inflated to around 240 mm HG for 30 seconds to cut oxygen supply to the muscle, while NIRS continues to measure O2Hb and HHb signals. The slope of the HHb signal during this occlusion helps measure the resting muscle oxygen consumption (mVO2) baseline value (Ryan et al., 2014). 
+
+After letting hemoglobin values return to baseline we have the participant perform steady plantar flexions to a metronome pace of 60bpm for 30 seconds. Transient occlusions are then performed every 8 seconds via cuff inflation over a duration of 3 minutes. 
+
+Each occlusion shows a slope representing mVO2, which gives us a picture of oxygen consumption through a curve of decay when they are plotted together. Fitting this curve with the equation:
+
+**mV̇O₂(t) = Rest + Delta · e^(−t/Tc)**
+
+yields **Tc**, which is the time constant of recovery: a number telling us the speed at which mVO2 falls back to resting levels post-exercise. Tc is tied to the **rate constant k=1/Tc**, meaning that **lower Tc/higher k values correspond to faster muscle recovery** (Ryan et al., 2014). Biologically, faster muscle recovery reflects greater mitochondrial respiratory capacity.
+
+Questions for Carmen: 
+Is my incorporation of the two articles good or should I reference them more specifically?
+
+# Methodology 
+# FitScope 
+FitScope is a R Shiny app and a Claude Code plugin for estimating **skeletal muscle
+mitochondrial oxidative capacity** from near-infrared spectroscopy (NIRS)
+arterial-occlusion recordings, following the repeated-occlusion method seen in previous literature (Ryan et al. 2012 ; yan et al. 2014).
+
+The tool requires a raw Oxysoft NIRS export file to be uploaded. The raw file will be cleaned, analyzed and visualized. The scripts below are the scripts required to undergo the cleaning, analysis, and plotting steps.  
+
+```
+cleaning_STEP/clean_nirs.R     raw .xlsx export -> cleaned, one-row-per-second dataset
+analysis_STEP/analyse_nirs.R   blood-volume correction, mVO2 per occlusion, the Tc fit
+plotting_STEP/plot_nirs.R      the six standard figures from the source papers
+```
+
+## The workflow of FitScope
+
+FitScope has two options the R Shiny App and the Claude Code plugin, the procedures of both are explained below:   
+| | |
+|---|---|
+| **`app/`** | A Shiny app: upload a raw export, run clean → analyse → plot, view QC, the recovery-fit table with plausibility flags, and the figures. |
+| **`.claude-plugin/`, `skills/`, `agents/`** | A Claude Code plugin: a `nirs-pipeline` skill that runs the pipeline conversationally, and a `pipeline-runner` subagent for batch runs. |
+
+## How to use the Shiny app 
+### 1. Clone the repo & Install R dependencies & Launch the Shiny app
+If  R studio/Positron is already installed, it can run the app.R , it can also run in the Terminal. If running on the Terminal, it requires the repo to be cloned and R and specific R packages to be installed.   
+ 
+```bash
+git clone https://github.com/fitgutlab/FitScope.git
+cd FitScope
+
+#Install R dependencies - the pipeline scripts' packages plus the app's own
+  R -e 'install.packages(c("shiny","DT","base64enc","readxl","dplyr","tidyr","readr","ggplot2","patchwork"))'
+
+#Launch the Shiny app
+  cd app
+  R -e 'shiny::runApp(".", launch.browser = TRUE)'
+```
+
+## How to use the Claude Code Plugin
+
+### 1. Download Claude Code  
+The Claude Code needs be installed in the Terminal or in a IDE (eg. Visual Studio Code, Positron).
+
+| | |
+|---|---|
+| **Claude Code** | The CLI, desktop app, or VS Code/JetBrains extension. See [code.claude.com/docs](https://code.claude.com/docs). |
+
+### 2. Open a Claude Code session
+It is important to locate the working directory  
+```bash
+cd ~/path/to/your/study        # wherever your raw .xlsx exports live
+claude
+```
+
+### 3. Install the plugin
+
+At Claude Code's `>` prompt:
+
+```
+/plugin marketplace add fitgutlab/FitScope
+/plugin install fitscope@fitgutlab
+```
+
+Restart Claude Code (`/exit`, then `claude` again) — plugins load at startup.
+
+### 4. Run the FitScope pipeline 
+
+```
+/fitscope:nirs-pipeline Practice12.xlsx  #This is a sample of how you can ask Claude to read a raw file 
+```
+
+or just describe the task in plain english language — the skill triggers on its own:
+
+```
+clean and analyse Practice12.xlsx, is the Tc trustworthy? #This is a sample prompt 
+```
+
+## Sample Figures (Philip) 
+
+| output | contents |
+|---|---|
+| `<id>_cleaned_1s.csv` | one row per second: O2Hb, HHb, tHb, phase, occlusion label |
+| `<id>_qc_report.csv` | per-probe Fit Factor, TSI%, resting-occlusion correlation |
+| `<id>_mvo2.csv` | mVO2 per occlusion × signal × correction |
+| `<id>_recovery_fit.csv` | Rest, Delta, End, **Tc**, **k**, R², `converged` |
+| `<id>_fig1..fig5.png`, `<id>_fig6_mvo2_recovery_fit.png` | the six figures |
+
+
+## Citation
+
+Appiah, P., de Torres, C., Machaz, I., Osorio, A. & Ortega-Santos, C. (2026).
+fitgutlab/FitScope: v1.0.0 (Version 1) [Computer software]. Zenodo.
+https://doi.org/10.5281/zenodo.22885722
+
+## References 
+
+Cheatham Lab. (2014). Near-infrared spectroscopy. https://cheathamlab.com/index.php/near-infrared-spectroscopy/
+
 Holloway, G. P., Thrush, A. B., Heigenhauser, G. J. F., Tandon, N. N.,
 Dyck, D. J., Bonen, A., & Spriet, L. L. (2007). Skeletal muscle
 mitochondrial FAT/CD36 content and palmitate oxidation are not decreased
@@ -45,251 +178,6 @@ Toledo, F. G. S., & Goodpaster, B. H. (2013). The role of weight loss
 and exercise in correcting skeletal muscle mitochondrial abnormalities
 in obesity, diabetes and aging. *Molecular and Cellular Endocrinology,
 379*(1–2), 30–34.
-
-# Explanation of NIRS (ANDREA)
-
-Near-infrared spectroscopy (NIRS) is a noninvasive way of measuring mitochondrial functioning through hemoglobin/myoglobin oxygenation, without cutting into the body or taking a sample. A sensor sits on the skin and sends near-infrared light to the tissue underneath where it scatters back to a detector on the sensor. Oxygenated (O2Hb) and deoxygenated (HHb) hemoglobin absorb near-infrared light at different levels, allowing the NIRS system to measure how much light is returning to the detectors and record changes in muscle oxygenation (Cheatham Lab, 2014). NIRS also provides the sum of these two signals as total hemoglobin (tHb), reflecting blood volume under the sensors. Because NIRS reflects oxygen delivered and consumed at once, a blood pressure cuff (pumped to above systolic blood pressure) stops arterial blood flow, allowing only oxygen consumption to be recorded at that moment (Ryan et al., 2012; Ryan et al., 2014). O2Hb falls and HHb rises during this event, and the slope of this change is the muscle's oxygen consumption (mVO2). Plotting these slopes post-exercise allows us to assess mitochondrial capacity (Ryan et al., 2014), which will be explained more thoroughly in the following section.
-
-Cheatham Lab. (2014). Near-infrared spectroscopy. https://cheathamlab.com/index.php/near-infrared-spectroscopy/
-
-Ryan, T. E., Brophy, P., Lin, C.-T., Hickner, R. C., & Neufer, P. D. (2014). Assessment of in vivo skeletal muscle mitochondrial respiratory capacity in humans by near-infrared spectroscopy: A comparison with in situ measurements. The Journal of Physiology, 592(15), 3231-3241. https://doi.org/10.1113/jphysiol.2014.274456
-
-Ryan, T. E., Erickson, M. L., Brizendine, J. T., Young, H.-J., & McCully, K. K. (2012). Noninvasive evaluation of skeletal muscle mitochondrial capacity with near-infrared spectroscopy: Correcting for blood volume changes. Journal of Applied Physiology, 113(2), 175-183. https://doi.org/10.1152/japplphysiol.00319.2012
-
-# NIRS Procedure (ANDREA)
-
-Near-infrared spectroscopy (NIRS) is a straightforward procedure. Our participant demographics are women of ages 18-60 with a BMI >25. Previous studies (Ryan et al., 2012; Ryan et al., 2014) have tested the viability of using NIRS as a substitute for muscle biopsies, however we do not yet know whether NIRS is able to reliably capture mitochondrial efficiency in women with overweight or obesity.
-
-We initiate by having the participant lie down, legs extended and relaxed. The NIRS probes Rx1 and Rx2 are placed on the thickest parts of the lateral (Rx_) and medial (Rx_) sides of the calf, and due to their high light sensitivity we wrap both probes in dark athletic tape. Placing the probes here allows us to obtain a more reliable signal due to the higher presence of muscle under the sensor, and allowing for consistent placement (Ryan et al., 2012). A blood pressure cuff is placed on the thigh of the same leg to cut blood and oxygen flow to the sensors for a brief period during the procedure.
-
-We start off the test with a two minute resting measurement. The cuff is then inflated to around 240 mm HG for 30 seconds to cut oxygen supply to the muscle, while NIRS continues to measure O2Hb and HHb signals. The slope of the HHb signal during this occlusion helps measure the resting muscle oxygen consumption (mVO2) baseline value (Ryan et al., 2014). 
-
-After letting hemoglobin values return to baseline we have the participant perform steady plantar flexions to a metronome pace of _bpm for 30 seconds. Transient occlusions are then performed every 8 seconds via cuff inflation over a duration of 3 minutes. 
-
-Each occlusion shows a slope representing mVO2, which gives us a picture of oxygen consumption through a curve of decay when they are plotted together. Fitting this curve with the equation:
-
-**mV̇O₂(t) = Rest + Delta · e^(−t/Tc)**
-
-yields **Tc**, which is the time constant of recovery: a number telling us the speed at which mVO2 falls back to resting levels post-exercise. Tc is tied to the **rate constant k=1/Tc**, meaning that **lower Tc/higher k values correspond to faster muscle recovery** (Ryan et al., 2014). Biologically, faster muscle recovery reflects greater mitochondrial respiratory capacity.
-
-Questions: 
-
-What is the bpm at which they flex their foot?
-
-Which Rx probes go where?
-
-Is my incorporation of the two articles good or should I reference them more specifically?
-
-Ryan, T. E., Brophy, P., Lin, C.-T., Hickner, R. C., & Neufer, P. D. (2014). Assessment of in vivo skeletal muscle mitochondrial respiratory capacity in humans by near-infrared spectroscopy: A comparison with in situ measurements. The Journal of Physiology, 592(15), 3231-3241. https://doi.org/10.1113/jphysiol.2014.274456
-
-Ryan, T. E., Erickson, M. L., Brizendine, J. T., Young, H.-J., & McCully, K. K. (2012). Noninvasive evaluation of skeletal muscle mitochondrial capacity with near-infrared spectroscopy: Correcting for blood volume changes. Journal of Applied Physiology, 113(2), 175-183. https://doi.org/10.1152/japplphysiol.00319.2012
-
-
-# NIRS Limitation (CLARA)
-The raw data given by the NIRS is quite challenging to interpret. Technically the actual values shown in the raw data do not mean anything, instead oxidative capacity is calculated using changes in slope, meaning high levels of data cleaning and analysis is required. In prior research studies, its authors used MATLAB, which is a programming language that requires a significant amount of prior knowledge to be able to use it. The need to use MATLAB stems from the fact that raw data comes with thousands of data points, majority of which are not as relevant (Tandirerung et al, 2024). The NIRS machine records data every .1 seconds and there are 6 lens that record data hence thousands and thousands of data points are recorded. To solve this issue of data interpretation we have developed FitScope. A tool that will clean, analyze, and visualize raw NIRS data. In addition to building an app we also developed a Claude Code plugin. This is especially significant because it does not require users to even download R studio or Visual Studio Code. Users just need to download their raw data and upload it to their Claude account.   
-
-Questions I have right now:
-- Each row in the data set is one second, or 10 rows is one second? 10 herts is 0.1 seconds?
-- The data only gives you the four columns or does it measure anything else?
-- How to properly explain the purpose of FitScope
-
-## Research objective
-Take a raw Oxysoft NIRS export from a repeated-occlusion recovery-kinetics
-protocol and produce a **trustworthy** Tc (and k) for each subject — the
-operative word being *trustworthy*, because, per above, a converged fit is
-not automatically one. The pipeline this repository ships was specified
-decision-by-decision by the lab's data owner (recorded in
-`data_cleaning_transcript.md` and `NIRS_Pipeline_Questions_and_Challenges.docx`),
-not derived or guessed at, and the two front ends below exist to run that
-exact pipeline without ever reimplementing it.
-
-# FitScope
-A Shiny app and a Claude Code plugin for estimating **skeletal muscle
-mitochondrial oxidative capacity** from near-infrared spectroscopy (NIRS)
-arterial-occlusion recordings, following the repeated-occlusion method of
-Ryan et al. 2012 (*J Appl Physiol* 113:175–183) and Ryan et al. 2014
-(*J Physiol* 592.15:3231–3241).
-
-NIRS recovery-kinetics analysis has the same failure mode every quantitative
-pipeline eventually has: the curve fit converges, the number looks
-physiological, and it's wrong. Fit one real recording in this repository and
-`nls` returns `Tc = 13.6 s` — a perfectly textbook-plausible number — from the
-same fit that implies a resting oxygen consumption of **−0.09** (negative
-oxygen consumption does not exist) and an end-exercise value of **89** against
-a physiological range of roughly 0.3–0.6, with R² = 0.17. None of that throws
-an error. The script runs to completion, writes a CSV, and draws a figure. The
-one thing wrong with an otherwise fully reproducible pipeline is the number
-you'd be tempted to put in a table.
-
-The opposite failure looks like success and isn't: the fit can also correctly
-refuse to converge at all. Three real recordings in this repository return
-`Tc = NA`, because their post-exercise occlusion series starts 95–109 seconds
-after exercise ends — three to three-and-a-half time constants for a normal
-20–40 s Tc, so most of the recovery is already over before measurement begins.
-A tool that quietly widened the fit window or reseeded `nls` until a number
-appeared would call this a success. FitScope calls it correctly: `NA`, with
-the reason stated.
-
-FitScope encodes the checks that catch both failures and refuses to let a
-result through without them. See [Guardrails](#guardrails) below.
-
-## What FitScope is
-Three fixed R scripts are the single source of truth for every number this
-project produces:
-
-```
-cleaning_STEP/clean_nirs.R     raw .xlsx export -> cleaned, one-row-per-second dataset
-analysis_STEP/analyse_nirs.R   blood-volume correction, mVO2 per occlusion, the Tc fit
-plotting_STEP/plot_nirs.R      the six standard figures from the source papers
-```
-
-Everything else in this repository is a way to run those three scripts
-without touching their logic:
-
-| | |
-|---|---|
-| **`app/`** | A Shiny app: upload a raw export, run clean → analyse → plot, view QC, the recovery-fit table with plausibility flags, and the figures. |
-| **`.claude-plugin/`, `skills/`, `agents/`** | A Claude Code plugin: a `nirs-pipeline` skill that runs the pipeline conversationally, and a `pipeline-runner` subagent for batch runs. |
-
-Both shell out to `Rscript` against the three scripts above, unmodified. If
-you've read `clean_nirs.R` and trust it, you can trust what either front end
-reports — there's no second implementation to drift out of sync with it.
-
-## How to use the Shiny app 
- ## 1. Clone the repo & Install R dependencies & Launch the Shiny app
- 
-```bash
-git clone https://github.com/fitgutlab/FitScope.git
-cd FitScope
-
-#Install R dependencies - the pipeline scripts' packages plus the app's own
-  R -e 'install.packages(c("shiny","DT","base64enc","readxl","dplyr","tidyr","readr","ggplot2","patchwork"))'
-
-#Launch the Shiny app
-  cd app
-  R -e 'shiny::runApp(".", launch.browser = TRUE)'
-```
-
-## How to use the Claude Code plugin
-
-### 1. What you need first
-
-| | |
-|---|---|
-| **Claude Code** | The CLI, desktop app, or VS Code/JetBrains extension. See [code.claude.com/docs](https://code.claude.com/docs). |
-| **R 4.4+** | Needs `readxl dplyr tidyr readr ggplot2 patchwork`. Check with `R --version`. |
-
-### 2. Open a Claude Code session
-
-```bash
-cd ~/path/to/your/study        # wherever your raw .xlsx exports live
-claude
-```
-
-### 3. Install the plugin
-
-At Claude Code's `>` prompt:
-
-```
-/plugin marketplace add fitgutlab/FitScope
-/plugin install fitscope@fitgutlab
-```
-
-Restart Claude Code (`/exit`, then `claude` again) — plugins load at startup.
-
-### 4. Check it worked
-
-```
-/fitscope:nirs-pipeline Practice12.xlsx
-```
-
-or just describe the task in plain language — the skill triggers on its own:
-
-```
-clean and analyse Practice12.xlsx, is the Tc trustworthy?
-```
-
-For several subjects at once, or to keep a long run's console output out of
-the main conversation, ask it to delegate to the `pipeline-runner` subagent
-instead.
-
-## Using it
-
-A raw Oxysoft `.xlsx` export in, subject id out. Each script finds its own
-inputs and writes into its own folder (`cleaning_STEP/`, `analysis_STEP/`,
-`plotting_STEP/`) regardless of where it's run from.
-
-```bash
-Rscript cleaning_STEP/clean_nirs.R   "Practice12.xlsx"   # -> cleaned 1 s dataset
-Rscript analysis_STEP/analyse_nirs.R "Practice12"        # -> mVO2, Tc, k
-Rscript plotting_STEP/plot_nirs.R    "Practice12"        # -> figures 1-5
-```
-
-| output | contents |
-|---|---|
-| `<id>_cleaned_1s.csv` | one row per second: O2Hb, HHb, tHb, phase, occlusion label |
-| `<id>_qc_report.csv` | per-probe Fit Factor, TSI%, resting-occlusion correlation |
-| `<id>_mvo2.csv` | mVO2 per occlusion × signal × correction |
-| `<id>_recovery_fit.csv` | Rest, Delta, End, **Tc**, **k**, R², `converged` |
-| `<id>_fig1..fig5.png`, `<id>_fig6_mvo2_recovery_fit.png` | the six figures |
-
-## Guardrails
-
-Both scripts report and continue rather than silently altering data:
-`[WARNING]` for event/QC/duration problems, `[NOTE]` for fit-plausibility
-problems. Across the two scripts there are **17 points** where a condition is
-checked and flagged rather than assumed:
-
-| guard | catches |
-|---|---|
-| TSI Fit Factor ≥ 95 | a probe whose signal quality doesn't support the analysis — flagged, never silently dropped (both probes are still averaged in, as specified) |
-| Resting-occlusion O2Hb/HHb correlation sign | a probe moving the *wrong* direction for oxygen consumption during the one window where the physiology is unambiguous |
-| Event-code presence/duplication | a marker missing, duplicated, or outside the expected set, before anything downstream trusts it |
-| Phase duration vs. protocol nominal | a baseline, occlusion, or recovery phase that ran markedly shorter or longer than specified, which can mean the markers themselves are shifted |
-| Corrected tHb ≈ 0 | the blood-volume correction identity (Ryan 2012): corrected tHb is zero *by construction*; a non-zero value means the correction broke, not a new finding |
-| Corrected O2Hb/HHb agreement | after correction, O2Hb and HHb carry the same information with opposite sign and so must yield the same Tc — checked to machine precision every run |
-| R² < 0.8, `Rest` < 0, `\|End\|` > 2, Tc outside ≈ 20–60 s | **the main hazard**: a converged fit that is not a trustworthy one (the `Tc = 13.6 s` example above trips three of these four at once) |
-| Minimum occlusions / points per slope | a 3-parameter exponential or a 3 s slope window being asked to fit more than the data can support |
-
-A guard that fires is doing its job. The response is to report what it found,
-not to relax it until the warning goes away — see
-`skills/nirs-pipeline/reference/pipeline-hazards.md` for the full reasoning
-behind each one, including the two converged-but-wrong and
-correctly-non-convergent cases above.
-
-## Known data issues (reported, not corrected)
-
-- One sample file's second probe shows a **positive** O2Hb/HHb correlation
-  during the resting occlusion (r = +0.92) — not oxygen-consumption behaviour.
-  It is still averaged in, as specified; the same probe is clean (r = −0.99)
-  in a different session, so this looks session-specific, not a faulty probe.
-- A different sample file has an extra event marker and is missing another;
-  its occlusion-cadence pattern is consistent with every event label being
-  shifted by one position. Flagged, not corrected.
-- Baseline duration across the three bundled sample files is 83 s, 192 s and
-  99 s against a nominal 120 s.
-
-None of these are fixed in code. The decisions belong to whoever owns the
-data, not to the pipeline — see `CLAUDE.md`.
-
-## Scope
-
-Downstream of acquisition only. FitScope starts from a raw Oxysoft `.xlsx`
-export; it does not control the NIRS device, and it does not do anything with
-a recording before that export exists.
-
-## Citation
-
-Appiah, P., de Torres, C., Machaz, I., Osorio, A. & Ortega-Santos, C. (2026).
-fitgutlab/FitScope: v1.0.0 (Version 1) [Computer software]. Zenodo.
-https://doi.org/10.5281/zenodo.22885722
-
-## References 
-
-Method: Ryan, T.E. et al. (2012), *J Appl Physiol* 113:175–183; Ryan, T.E. &
-Neufer, P.D. (2014), *J Physiol* 592.15:3231–3241. Cleaning and QC procedure
-specified by C. Ortega-Santos. Built by FITGut LAB, The George Washington
-University.
 
 ## License
 
