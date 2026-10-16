@@ -124,7 +124,8 @@ or just describe the task in plain english language — the skill triggers on it
 clean and analyse Practice12.xlsx, is the Tc trustworthy? #This is a sample prompt 
 ```
 
-## The Output: The tool produces outputs from the cleaining, analysis and ploting steps: 
+### The Output: 
+The tool produces outputs from the cleaining, analysis and ploting steps: 
 
 | output | contents |
 |---|---|
@@ -136,7 +137,6 @@ clean and analyse Practice12.xlsx, is the Tc trustworthy? #This is a sample prom
 
 ### Sample plots from Fitscope
 ---
-<div align="center">
 
   <img src="https://raw.githubusercontent.com/fitgutlab/FitScope/main/www/practice_4_plots.png" width="45%" alt="Practice 4 plots" width="45%" alt="Recovery series2" />
 
