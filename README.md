@@ -133,9 +133,9 @@ The tool produces outputs from the cleaining, analysis and ploting steps:
 | `<id>_qc_report.csv` | per-probe Fit Factor, TSI%, resting-occlusion correlation |
 | `<id>_mvo2.csv` | mVO2 per occlusion × signal × correction |
 | `<id>_recovery_fit.csv` | Rest, Delta, End, **Tc**, **k**, R², `converged` |
-| `<id>_fig1..fig5.png`, `<id>_fig6_mvo2_recovery_fit.png` | the six figures |
+| `<id>_fig1..fig5.png`, `<id>_fig6_mvo2_recovery_fit.png` | six figures |
 
-### Sample plots from Fitscope
+### Plots and Output from Fitscope 
 ---
 
 <table>
