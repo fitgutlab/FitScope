@@ -137,21 +137,42 @@ The tool produces outputs from the cleaining, analysis and ploting steps:
 
 ### Sample plots from Fitscope
 ---
-<div align="center">
 
-  <img src="https://raw.githubusercontent.com/fitgutlab/FitScope/main/www/practice_4_plots.png" width="90%" alt="Practice 4 plots" width="45%" alt="Recovery series2" />
+<table>
+  <tr>
+    <td align="center" width="50%">
+      <img src="https://raw.githubusercontent.com/fitgutlab/FitScope/main/www/practice_4_plots.png" width="100%" alt="Practice 4 plots" />
+    </td>
+    <td align="center" width="50%">
+      <img src="https://raw.githubusercontent.com/fitgutlab/FitScope/main/www/practice_4_fig2_recovery_series.png" width="100%" alt="Recovery series" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="https://raw.githubusercontent.com/fitgutlab/FitScope/main/www/practice_4_fig3_cuff_magnification.png" width="100%" alt="Cuff magnification" />
+    </td>
+    <td align="center" width="50%">
+      <img src="https://raw.githubusercontent.com/fitgutlab/FitScope/main/www/practice_4_fig4_resting_occlusion.png" width="100%" alt="Resting occlusion" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="https://raw.githubusercontent.com/fitgutlab/FitScope/main/www/practice_4_fig5_probe_comparison.png" width="100%" alt="Probe comparison" />
+    </td>
+    <td align="center" width="50%">
+      <img src="https://raw.githubusercontent.com/fitgutlab/FitScope/main/www/practice_4_fig6_mvo2_recovery_fit.png" width="100%" alt="MVO2 recovery fit" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">
+      <img src="https://raw.githubusercontent.com/fitgutlab/FitScope/main/www/practice_4_fig1_protocol_overview.png" width="100%" alt="Protocol overview" />
+    </td>
+    <td align="center" width="50%">
+      <img src="https://raw.githubusercontent.com/fitgutlab/FitScope/main/www/mOv.png" width="100%" alt="MVO2 plot" />
+    </td>
+  </tr>
+</table>
 
-  <img src="https://raw.githubusercontent.com/fitgutlab/FitScope/main/www/practice_4_fig2_recovery_series.png" width="45%" alt="Recovery series" />
-  <img src="https://raw.githubusercontent.com/fitgutlab/FitScope/main/www/practice_4_fig3_cuff_magnification.png" width="45%" alt="Cuff magnification" />
-
-  <img src="https://raw.githubusercontent.com/fitgutlab/FitScope/main/www/practice_4_fig4_resting_occlusion.png" width="45%" alt="Resting occlusion" />
-  <img src="https://raw.githubusercontent.com/fitgutlab/FitScope/main/www/practice_4_fig5_probe_comparison.png" width="45%" alt="Probe comparison" />
-
-  <img src="https://raw.githubusercontent.com/fitgutlab/FitScope/main/www/practice_4_fig6_mvo2_recovery_fit.png" width="45%" alt="MVO2 recovery fit" />
-  
-  <img src="https://raw.githubusercontent.com/fitgutlab/FitScope/main/www/practice_4_fig1_protocol_overview.png" width="90%" alt="Protocol overview" />
-
-</div>
 
 ---
 
