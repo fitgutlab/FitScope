@@ -138,7 +138,7 @@ clean and analyse Practice12.xlsx, is the Tc trustworthy? #This is a sample prom
 
 <div align="center">
 
-  <img src="https://raw.githubusercontent.com/fitgutlab/FitScope/main/www/practice_4_plots.png" width="90%" alt="Practice 4 plots" />
+  <img src="https://raw.githubusercontent.com/fitgutlab/FitScope/main/www/practice_4_plots.png" width="45%" alt="Practice 4 plots" width="45%" alt="Recovery series2" />
 
   <img src="https://raw.githubusercontent.com/fitgutlab/FitScope/main/www/practice_4_fig2_recovery_series.png" width="45%" alt="Recovery series" />
   <img src="https://raw.githubusercontent.com/fitgutlab/FitScope/main/www/practice_4_fig3_cuff_magnification.png" width="45%" alt="Cuff magnification" />
