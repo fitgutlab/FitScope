@@ -33,6 +33,8 @@ exact pipeline without ever reimplementing it.
 
 Near-infrared spectroscopy (NIRS) is a noninvasive way to measure mitochondrial function through hemoglobin/myoglobin oxygenation, without cutting into the body or taking a sample. A sensor sits on the skin and sends near-infrared light to the tissue underneath, where it scatters back to a detector on the sensor. Oxygenated (O2Hb) and deoxygenated (HHb) hemoglobin absorb near-infrared light differently, allowing the NIRS system to measure returning light and record changes in muscle oxygenation (Cheatham Lab, 2014). NIRS also provides the sum of these two signals as total hemoglobin (tHb), reflecting blood volume under the sensors. Because NIRS reflects oxygen delivery and consumption simultaneously, a blood pressure cuff (pumped above systolic blood pressure) stops arterial blood flow, allowing only oxygen consumption to be recorded at that moment (Ryan et al., 2012; Ryan et al., 2014). O2Hb falls, and HHb rises during this event, and the slope of this change is the muscle's oxygen consumption (mVO2). Plotting these slopes post-exercise lets us assess mitochondrial capacity (Ryan et al., 2014), which we explain in the following section.
 
+HB Model
+
 ## NIRS Study Design  
 
 NIRS is a straightforward procedure. Our participant demographics are women aged 18-60 with a BMI of 25-40 kg/m2. Previous studies (Ryan et al., 2012; Ryan et al., 2014) have tested the viability of using NIRS as a substitute for muscle biopsies; however, we do not yet know whether NIRS is able to reliably capture mitochondrial efficiency in women with overweight or obesity, i.e., with distinct body fat compositions. The literature is heterogeneous, considering how adipose tissue might interfere with NIRS. 
@@ -49,6 +51,7 @@ Each occlusion shows a slope representing mVO2, which, when plotted together, gi
 
 yields **Tc**, which is the time constant of recovery: a number telling us the speed at which mVO2 falls back to resting levels post-exercise. Tc is tied to the **rate constant k=1/Tc**, meaning that **lower Tc/higher k values correspond to faster muscle recovery** (Ryan et al., 2014). Biologically, faster muscle recovery reflects greater mitochondrial respiratory capacity.
 
+PICTURE OF THE TEST 
 
 ## FitScope Tool  
 FitScope is an integrated tool of an R Shiny app and a Claude Code plugin for estimating **skeletal muscle
@@ -63,7 +66,7 @@ analysis_STEP/analyse_nirs.R   blood-volume correction, mVO2 per occlusion, the 
 plotting_STEP/plot_nirs.R      the six standard figures from the source papers
 ```
 
-## The workflow of FitScope
+### The workflow of FitScope
 
 FitScope has two options: the R Shiny App and the Claude Code plugin; the procedures for both are explained below:   
 | | |
@@ -71,8 +74,8 @@ FitScope has two options: the R Shiny App and the Claude Code plugin; the proced
 | **`app/`** | A Shiny app: upload a raw export, run clean → analyze → plot, view QC, the recovery-fit table with plausibility flags, and the figures. |
 | **`.claude-plugin/`, `skills/`, `agents/`** | A Claude Code plugin: a `nirs-pipeline` skill that runs the pipeline conversationally, and a `pipeline-runner` subagent for batch runs. |
 
-## How to use the Shiny app 
-### 1. Clone the repo & Install R dependencies & Launch the Shiny app
+### How to use the Shiny app 
+#### 1. Clone the repo & Install R dependencies & Launch the Shiny app
 If  R studio/Positron is already installed, it can run the app.R , it can also run in the Terminal. If running on the Terminal, it requires the repo to be cloned and R and specific R packages to be installed.   
  
 ```bash
@@ -87,23 +90,23 @@ cd FitScope
   R -e 'shiny::runApp(".", launch.browser = TRUE)'
 ```
 
-## How to use the Claude Code Plugin
+### How to use the Claude Code Plugin
 
-### 1. Download Claude Code  
+#### 1. Download Claude Code  
 The Claude Code needs be installed in the Terminal or in a IDE (eg. Visual Studio Code, Positron).
 
 | | |
 |---|---|
 | **Claude Code** | The CLI, desktop app, or VS Code/JetBrains extension. See [code.claude.com/docs](https://code.claude.com/docs). |
 
-### 2. Open a Claude Code session
+#### 2. Open a Claude Code session
 It is important to locate the working directory  
 ```bash
 cd ~/path/to/your/study        # wherever your raw .xlsx exports live
 claude
 ```
 
-### 3. Install the plugin
+#### 3. Install the plugin
 
 At Claude Code's `>` prompt:
 
@@ -114,7 +117,7 @@ At Claude Code's `>` prompt:
 
 Restart Claude Code (`/exit`, then `claude` again) — plugins load at startup.
 
-### 4. Run the FitScope pipeline 
+#### 4. Run the FitScope pipeline 
 
 ```
 /fitscope:nirs-pipeline Practice12.xlsx  #This is a sample of how you can ask Claude to read a raw file 
@@ -126,7 +129,7 @@ or just describe the task in plain english language — the skill triggers on it
 clean and analyse Practice12.xlsx, is the Tc trustworthy? #This is a sample prompt 
 ```
 
-### The Output: 
+#### The Output: 
 The tool produces outputs from the cleaining, analysis and ploting steps: 
 
 | output | contents |
@@ -137,7 +140,7 @@ The tool produces outputs from the cleaining, analysis and ploting steps:
 | `<id>_recovery_fit.csv` | Rest, Delta, End, **Tc**, **k**, R², `converged` |
 | `<id>_fig1..fig5.png`, `<id>_fig6_mvo2_recovery_fit.png` | six figures |
 
-### Plots and Output from Fitscope 
+#### Plots and Output from Fitscope 
 ---
 
 <table>
