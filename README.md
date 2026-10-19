@@ -220,6 +220,8 @@ skeletal muscle oxidative capacity with phosphorus magnetic resonance
 spectroscopy. *Journal of Applied Physiology, 115*(12), 1757–1766.
 https://doi.org/10.1152/japplphysiol.00835.2013
 
+Tandirerung, F. J., Jamieson, A., Hendrick, E., Hughes, A. D., & Jones, S. (2024). Near-infrared spectroscopy (NIRS) in vivo assessment of skeletal muscle oxidative capacity: a comparison of results from short versus long exercise protocols and reproducibility in non-athletic adults. Frontiers in Physiology, 15. https://doi.org/10.3389/fphys.2024.1429673
+
 Toledo, F. G. S., & Goodpaster, B. H. (2013). The role of weight loss
 and exercise in correcting skeletal muscle mitochondrial abnormalities
 in obesity, diabetes and aging. *Molecular and Cellular Endocrinology,
