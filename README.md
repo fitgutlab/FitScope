@@ -18,7 +18,7 @@ Primarily, the data reuslts is not always physiologically reliable. There can be
 
 To address this issue of data interpretation, we have developed FitScope. A tool that will clean, analyze, and visualize raw NIRS data to estimate skeletal muscle mitochondrial oxidative capacity. In addition to building an app, we also developed a Claude Code plugin. This is especially significant because it does not require users to even download RStudio or Visual Studio Code. Users just need to download their raw data and upload it to their Claude account.   
 
-## Research objective
+## Research objective ------WE NED TO REWRITE THIS: 
 Take a raw NIRS export from a repeated-occlusion recovery-kinetics
 protocol and produce a **trustworthy** Tc (and k) for each subject — the
 operative word being *trustworthy*, because, per above, a converged fit is
