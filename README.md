@@ -49,11 +49,8 @@ Each occlusion shows a slope representing mVO2, which, when plotted together, gi
 
 yields **Tc**, which is the time constant of recovery: a number telling us the speed at which mVO2 falls back to resting levels post-exercise. Tc is tied to the **rate constant k=1/Tc**, meaning that **lower Tc/higher k values correspond to faster muscle recovery** (Ryan et al., 2014). Biologically, faster muscle recovery reflects greater mitochondrial respiratory capacity.
 
-Questions for Carmen: 
-Is my incorporation of the two articles good or should I reference them more specifically? This is great as those are the validation tools for assessing mitochondrial oxidative capacity. 
 
-
-## FitScope 
+## FitScope Study Design 
 FitScope is an integrated tool of an R Shiny app and a Claude Code plugin for estimating **skeletal muscle
 mitochondrial oxidative capacity** from near-infrared spectroscopy (NIRS)
 arterial-occlusion recordings, following the repeated-occlusion method described in previous literature (Ryan et al. 2012 ; yan et al. 2014).
