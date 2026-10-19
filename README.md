@@ -27,7 +27,7 @@ decision-by-decision by the lab's data owner (recorded in
 `data_cleaning_transcript.md` and `NIRS_Pipeline_Questions_and_Challenges.docx`),
 not derived or guessed at, and the two front ends below exist to run that
 exact pipeline without ever reimplementing it.
-
+## Methodology 
 # NIRS Overview
 
 Near-infrared spectroscopy (NIRS) is a noninvasive way to measure mitochondrial function through hemoglobin/myoglobin oxygenation, without cutting into the body or taking a sample. A sensor sits on the skin and sends near-infrared light to the tissue underneath, where it scatters back to a detector on the sensor. Oxygenated (O2Hb) and deoxygenated (HHb) hemoglobin absorb near-infrared light differently, allowing the NIRS system to measure returning light and record changes in muscle oxygenation (Cheatham Lab, 2014). NIRS also provides the sum of these two signals as total hemoglobin (tHb), reflecting blood volume under the sensors. Because NIRS reflects oxygen delivery and consumption simultaneously, a blood pressure cuff (pumped above systolic blood pressure) stops arterial blood flow, allowing only oxygen consumption to be recorded at that moment (Ryan et al., 2012; Ryan et al., 2014). O2Hb falls, and HHb rises during this event, and the slope of this change is the muscle's oxygen consumption (mVO2). Plotting these slopes post-exercise lets us assess mitochondrial capacity (Ryan et al., 2014), which we explain in the following section.
@@ -51,7 +51,7 @@ yields **Tc**, which is the time constant of recovery: a number telling us the s
 Questions for Carmen: 
 Is my incorporation of the two articles good or should I reference them more specifically? This is great as those are the validation tools for assessing mitochondrial oxidative capacity. 
 
-# Methodology 
+
 # FitScope 
 FitScope is an integrated tool of an R Shiny app and a Claude Code plugin for estimating **skeletal muscle
 mitochondrial oxidative capacity** from near-infrared spectroscopy (NIRS)
