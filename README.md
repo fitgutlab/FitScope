@@ -33,7 +33,7 @@ exact pipeline without ever reimplementing it.
 
 Near-infrared spectroscopy (NIRS) is a noninvasive way to measure mitochondrial function through hemoglobin/myoglobin oxygenation, without cutting into the body or taking a sample. A sensor sits on the skin and sends near-infrared light to the tissue underneath, where it scatters back to a detector on the sensor. Oxygenated (O2Hb) and deoxygenated (HHb) hemoglobin absorb near-infrared light differently, allowing the NIRS system to measure returning light and record changes in muscle oxygenation (Cheatham Lab, 2014). NIRS also provides the sum of these two signals as total hemoglobin (tHb), reflecting blood volume under the sensors. Because NIRS reflects oxygen delivery and consumption simultaneously, a blood pressure cuff (pumped above systolic blood pressure) stops arterial blood flow, allowing only oxygen consumption to be recorded at that moment (Ryan et al., 2012; Ryan et al., 2014). O2Hb falls, and HHb rises during this event, and the slope of this change is the muscle's oxygen consumption (mVO2). Plotting these slopes post-exercise lets us assess mitochondrial capacity (Ryan et al., 2014), which we explain in the following section.
 
-##NIRS Procedure 
+## NIRS Study Design  
 
 NIRS is a straightforward procedure. Our participant demographics are women aged 18-60 with a BMI of 25-40 kg/m2. Previous studies (Ryan et al., 2012; Ryan et al., 2014) have tested the viability of using NIRS as a substitute for muscle biopsies; however, we do not yet know whether NIRS is able to reliably capture mitochondrial efficiency in women with overweight or obesity, i.e., with distinct body fat compositions. The literature is heterogeneous, considering how adipose tissue might interfere with NIRS. 
 
