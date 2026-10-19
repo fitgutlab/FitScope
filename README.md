@@ -2,11 +2,11 @@
 
 # Introduction
 
-A key indicator of muscle health is skeletal muscle mitochondrial capacity; in other words, how quickly the muscle can use oxygen to regenerate ATP. Reduced oxidative capacity is directly linked to chronic health problems and poorer exercise performance (Maliszewski et al., 2024). Researchers typically measure this key marker from a muscle biopsy, an invasive procedure that requires a 1-2 centimeter incision, a needle, a trained clinician, and a specialized lab (Ross et al., 2023). Once a tissue sample is taken, muscle fibers must be chemically treated and examined using high-resolution respirometry (e.g., Oroboros) while the tissue is fresh to analyze mitochondrial activity (Ryan et al., 2014).
+A key indicator of muscle health is skeletal muscle mitochondrial capacity; in other words, how quickly the muscle can use oxygen to regenerate ATP. Reduced oxidative capacity is directly linked to chronic health problems and poorer exercise performance (Maliszewski et al., 2024). Researchers typically measure this key marker from a muscle biopsy, an invasive procedure that requires a 1-2 centimeter incision, a needle, a trained clinician, and a specialized lab (Ross et al., 2023). Once a tissue sample is taken, researchers must chemically treat muscle fibers and examine them using high-resolution respirometry (e.g., Oroboros) while the tissue is fresh to analyze mitochondrial activity (Ryan et al., 2014).
 
-For each participant, this is burdensome because it requires a local anesthetic, a skin incision, a needle inserted into the muscle, and, in some cases, soreness and pain for about two weeks (Ross et al., 2023). This procedure creates many limitations for biomedical research investigating muscle health. It is difficult to repeat this on the same participant, making it hard to track changes over time; in many cases, monitoring changes is imperative to determine whether muscle health is responding to training or treatment. It is also difficult to run on large groups because it requires staff, lab capacity, and funding, limiting the number of participants the study can include. 
+For each participant, this is burdensome because it requires a local anesthetic, a skin incision, a needle inserted into the muscle, and, in some cases, soreness and pain for about two weeks (Ross et al., 2023). This procedure creates many limitations for biomedical research investigating muscle health. It is difficult to repeat the procedure on the same participant, making it hard to track changes over time; in many cases, monitoring changes is imperative to determine whether muscle health responds to training or treatment. It is also difficult to run on large groups because it requires staff, lab capacity, and funding, limiting the number of participants the study can include. 
 
-Near-infrared spectroscopy (NIRS) lets us measure the same key marker without these limitations. Muscle mitochondrial oxidative capacity can be estimated from outside the body, with no anesthesia, incision, post-procedure soreness, or wet-lab processing, making it more comfortable for the patient and practitioner (Ryan et al., 2014). The other non-invasive option, phosphorus magnetic resonance spectroscopy (31P-MRS), requires an MRI machine, making it costly and hard to access (Maliszewski et al., 2024). NIRS results show a strong correlation with 31P-MRS (r=0.88-0.95; Ryan et al., 2013). NIRS also correlates with high-resolution respirometry data from biopsy tissue (r=0.61-0.74; Ryan et al., 2014).
+Near-infrared spectroscopy (NIRS) lets us measure the same key marker without these limitations. Muscle mitochondrial oxidative capacity can be estimated from outside the body, without anesthesia, incisions, post-procedure soreness, or wet-lab processing, making it more comfortable for patients and practitioners (Ryan et al., 2014). The other non-invasive option, phosphorus magnetic resonance spectroscopy (31P-MRS), requires an MRI machine, making it costly and hard to access (Maliszewski et al., 2024). NIRS results show a strong correlation with 31P-MRS (r=0.88-0.95; Ryan et al., 2013). NIRS also correlates with high-resolution respirometry data from biopsy tissue (r=0.61-0.74; Ryan et al., 2014).
 
 Because the procedure is simple and cost-effective, NIRS can be repeated as often as needed, making it extremely useful for populations whose muscle health needs constant monitoring. Skeletal muscle in women with obesity has fewer mitochondria than the muscle of leaner counterparts (Holloway et al., 2007). In addition, aging individuals and patients with type 2 diabetes have lower mitochondrial capacity (Toledo & Goodpaster, 2013). In these populations, mitochondrial capacity can improve with physical activity, and tracking helps inform and improve treatment programs (Toledo & Goodpaster, 2013). A method that can be repeated as often as needed on any patient, with no recovery time and no incision, makes this monitoring possible outside of the laboratory. In addition, it allows for clinical use for those who are medically compromised, whether they suffer from a chronic disease or are in recovery from an injury. Every biopsy can pose a risk of infection and bleeding at the site (Ross et al., 2023), making any biopsy on compromised patients a health risk, and the risk increases with repeated biopsies. Across the biopsy techniques reviewed, hematomas and bruising were reported in up to one third of patients, and wound infections were seen in about 1-5% of open biopsies (Ross et al., 2023).
 
@@ -30,15 +30,15 @@ Near-infrared spectroscopy (NIRS) is a noninvasive way to measure mitochondrial 
 
 # NIRS Procedure 
 
-NIRS is a straightforward procedure. Our participant demographics are women of ages 18-60 with a BMI 25-40 kg/m2. Previous studies (Ryan et al., 2012; Ryan et al., 2014) have tested the viability of using NIRS as a substitute for muscle biopsies, however we do not yet know whether NIRS is able to reliably capture mitochondrial efficiency in women with overweight or obesity i.e., with distinct body fat compositions. The literature is heterogenous considering how adipose tissue might interfer with the NIRS. 
+NIRS is a straightforward procedure. Our participant demographics are women aged 18-60 with a BMI of 25-40 kg/m2. Previous studies (Ryan et al., 2012; Ryan et al., 2014) have tested the viability of using NIRS as a substitute for muscle biopsies; however, we do not yet know whether NIRS is able to reliably capture mitochondrial efficiency in women with overweight or obesity, i.e., with distinct body fat compositions. The literature is heterogeneous, considering how adipose tissue might interfere with NIRS. 
 
-We initiate by having the participant lie down, legs extended and relaxed. The NIRS probes Rx1 and Rx2 are placed on the thickest parts of the lateral (Rx1) and medial (Rx2) sides of the calf, and due to their high light sensitivity we wrap both probes in dark athletic tape. Placing the probes here allows us to obtain a more reliable signal due to the higher presence of muscle under the sensor, and allowing for consistent placement (Ryan et al., 2012). A blood pressure cuff is placed on the thigh of the same leg to cut blood and oxygen flow to the sensors for a brief period during the procedure.
+We begin by having the participant lie down with legs extended and relaxed. We place the NIRS probes Rx1 and Rx2 on the thickest parts of the lateral (Rx1) and medial (Rx2) sides of the calf, and because they are highly light-sensitive, we wrap both probes in dark athletic tape. Placing the probes here gives a more reliable signal because more muscle is under the sensor and allows consistent placement (Ryan et al., 2012). A blood pressure cuff is placed on the thigh of the same leg to briefly cut blood and oxygen flow to the sensors during the procedure.
 
-We start off the test with a two minute resting measurement. The cuff is then inflated to around 240 mm HG for 30 seconds to cut oxygen supply to the muscle, while NIRS continues to measure O2Hb and HHb signals. The slope of the HHb signal during this occlusion helps measure the resting muscle oxygen consumption (mVO2) baseline value (Ryan et al., 2014). 
+We start off the test with a two-minute resting measurement. We then inflate the cuff to around 240 mm Hg for 30 seconds to cut oxygen supply to the muscle, while NIRS continues to measure O2Hb and HHb signals. The slope of the HHb signal during this occlusion helps estimate the baseline resting muscle oxygen consumption (mVO2) (Ryan et al., 2014). 
 
-After letting hemoglobin values return to baseline we have the participant perform steady plantar flexions to a metronome pace of 60bpm for 30 seconds. Transient occlusions are then performed every 8 seconds via cuff inflation over a duration of 3 minutes. 
+After hemoglobin values return to baseline, the participant performs steady plantar flexions to a metronome pace of 60 bpm for 30 seconds. We then perform transient occlusions every 8 seconds via cuff inflation for 3 minutes. 
 
-Each occlusion shows a slope representing mVO2, which gives us a picture of oxygen consumption through a curve of decay when they are plotted together. Fitting this curve with the equation:
+Each occlusion shows a slope representing mVO2, which, when plotted together, gives a picture of oxygen consumption through a decay curve. Fitting this curve with the equation:
 
 **mV̇O₂(t) = Rest + Delta · e^(−t/Tc)**
 
@@ -49,7 +49,7 @@ Is my incorporation of the two articles good or should I reference them more spe
 
 # Methodology 
 # FitScope 
-FitScope is an intregated tool of R Shiny app and a Claude Code plugin for estimating **skeletal muscle
+FitScope is an integrated tool of an R Shiny app and a Claude Code plugin for estimating **skeletal muscle
 mitochondrial oxidative capacity** from near-infrared spectroscopy (NIRS)
 arterial-occlusion recordings, following the repeated-occlusion method described in previous literature (Ryan et al. 2012 ; yan et al. 2014).
 
@@ -63,10 +63,10 @@ plotting_STEP/plot_nirs.R      the six standard figures from the source papers
 
 ## The workflow of FitScope
 
-FitScope has two options the R Shiny App and the Claude Code plugin, the procedures of both are explained below:   
+FitScope has two options: the R Shiny App and the Claude Code plugin; the procedures for both are explained below:   
 | | |
 |---|---|
-| **`app/`** | A Shiny app: upload a raw export, run clean → analyse → plot, view QC, the recovery-fit table with plausibility flags, and the figures. |
+| **`app/`** | A Shiny app: upload a raw export, run clean → analyze → plot, view QC, the recovery-fit table with plausibility flags, and the figures. |
 | **`.claude-plugin/`, `skills/`, `agents/`** | A Claude Code plugin: a `nirs-pipeline` skill that runs the pipeline conversationally, and a `pipeline-runner` subagent for batch runs. |
 
 ## How to use the Shiny app 
