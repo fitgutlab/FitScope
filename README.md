@@ -43,13 +43,13 @@ NIRS is a straightforward procedure. We begin by having the participant lie down
 
 We start off the test with a two-minute resting measurement. We then inflate the cuff to around 240 mm Hg for 30 seconds to cut oxygen supply to the muscle, while NIRS continues to measure O2Hb and HHb signals. The slope of the HHb signal during this occlusion helps estimate the baseline resting muscle oxygen consumption (mVO2) (Ryan et al., 2014). 
 
-After hemoglobin values return to baseline, the participant performs steady plantar flexions to a metronome pace of 60 bpm for 30 seconds. We then perform transient occlusions every 8 seconds via cuff inflation for 3 minutes. 
+After hemoglobin values return to baseline during reperfusion, the participant performs steady plantar flexions to a metronome pace of 60 bpm for 30 seconds. We again let all values return to baseline, then perform transient occlusions every 8 seconds via cuff inflation for 3 minutes. 
 
 Each occlusion shows a slope representing mVO2, which, when plotted together, gives a picture of oxygen consumption through a decay curve. Fitting this curve with the equation:
 
 **mV̇O₂(t) = Rest + Delta · e^(−t/Tc)**
 
-yields **Tc**, which is the time constant of recovery: a number telling us the speed at which mVO2 falls back to resting levels post-exercise. Tc is tied to the **rate constant k=1/Tc**, meaning that **lower Tc/higher k values correspond to faster muscle recovery** (Ryan et al., 2014). Biologically, faster muscle recovery reflects greater mitochondrial respiratory capacity.
+yields **Tc**, which is the time constant of recovery: a number telling us the speed at which mVO2 falls back to resting levels post-exercise. Tc is tied to the **rate constant k=1/Tc**, meaning that **lower Tc/higher k values correspond to faster muscle recovery** (Ryan et al., 2014). Biologically, faster muscle recovery reflects greater mitochondrial respiratory capacity and higher metabolic flexability.
 
 PICTURE OF THE TEST 
 
