@@ -28,6 +28,8 @@ decision-by-decision by the lab's data owner (recorded in
 not derived or guessed at, and the two front ends below exist to run that
 exact pipeline without ever reimplementing it.
 
+The overall aim of this study is to determine whether NIRS can provide a valid and trustworthy non-invasive estimate of skeletal muscle mitochondrial oxidative capacity in women with overweight or obesity. And to achieve that aim, we develop FitScope, an open-source tool that produces these estimates from raw NIRS data in a standardized way.
+
 # Methodology 
 ## NIRS Overview
 
