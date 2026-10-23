@@ -45,7 +45,7 @@ NIRS is a noninvasive way to measure mitochondrial function through hemoglobin/m
     alt="Hemoglobin oxygen delivery to muscle tissue and ATP production"
   />
 </p>
----
+
 
 ## NIRS Study Design  
 
