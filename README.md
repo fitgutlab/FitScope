@@ -22,19 +22,19 @@ To address these challanges, we have developed FitScope, an open-source tool tha
 
 The overall aim of this study is to determine whether NIRS can provide a valid and trustworthy non-invasive estimate of skeletal muscle mitochondrial oxidative capacity in women with overweight or obesity. And to achieve that aim, we develop FitScope, an open-source tool that produces these estimates from raw NIRS data in a standardized way.
 
-Assess signal quality and feasibility.
+1. Assess signal quality and feasibility.
 Determine whether usable NIRS signals can be obtained from the lateral (Rx1) and medial (Rx2) gastrocnemius of women aged 18–60 with a BMI of 25–40 kg/m². This will be quantified as the proportion of participants and probes that pass predefined quality-control criteria: Fit Factor, TSI%, resting-occlusion correlation, fit convergence, and R² threshold.
 
-Estimate mitochondrial oxidative capacity.
+2. Estimate mitochondrial oxidative capacity.
 Quantify the recovery time constant (Tc) and rate constant (k) for each participant by fitting a mono-exponential model to post-exercise mVO₂ recovery. These values will be compared between the lateral and medial probe sites and with published values from lean and healthy populations.
 
-Examine the influence of body composition.
+3. Examine the influence of body composition.
 Determine whether BMI and subcutaneous adipose tissue thickness at the probe sites are associated with signal quality, with the rate of rejected fits, and with Tc and k values.
 
-Develop a standardized analysis pipeline.
+4. Develop a standardized analysis pipeline.
 Build FitScope to carry out the lab's pre-specified processing steps on raw Oxysoft exports. These steps are data cleaning, blood-volume correction, occlusion identification, mVO₂ calculation per occlusion, and the recovery-curve fit. FitScope will offer two front ends, an R Shiny app and a Claude Code plugin, and both will run the same underlying scripts so that they produce identical outputs.
 
-Define criteria for a trustworthy fit.
+5. Define criteria for a trustworthy fit.
 Establish and apply explicit rules that flag fits that converge mathematically but are not physiologically plausible.
 
 # Methodology 
