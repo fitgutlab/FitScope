@@ -37,7 +37,15 @@ Build FitScope to carry out the lab's pre-specified processing steps on raw Oxys
 
 NIRS is a noninvasive way to measure mitochondrial function through hemoglobin/myoglobin oxygenation, without cutting into the body or taking a sample. A sensor sits on the skin and sends near-infrared light to the tissue underneath, where it scatters back to a detector on the sensor. Oxygenated (O2Hb) and deoxygenated (HHb) hemoglobin absorb near-infrared light differently, allowing the NIRS system to measure returning light and record changes in muscle oxygenation (Cheatham Lab, 2014). NIRS also provides the sum of these two signals as total hemoglobin (tHb), reflecting blood volume under the sensors. Because NIRS captures both oxygen delivery and consumption simultaneously, a blood pressure cuff (pumped above systolic blood pressure) stops arterial blood flow, allowing only oxygen consumption to be recorded at that moment (Ryan et al., 2012; Ryan et al., 2014). O2Hb falls, and HHb rises during this event, and the slope of this change is the muscle's oxygen consumption (mVO2). Plotting these slopes post-exercise lets us assess mitochondrial capacity (Ryan et al., 2014), which we explain further in the following section.
 
-**HB Model**
+---
+<p align="center">
+  <img
+    src="https://raw.githubusercontent.com/fitgutlab/FitScope/main/www/HB%20Model%20FitScope.jpg"
+    width="100%"
+    alt="Hemoglobin oxygen delivery to muscle tissue and ATP production"
+  />
+</p>
+---
 
 ## NIRS Study Design  
 
