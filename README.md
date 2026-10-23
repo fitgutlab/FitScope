@@ -67,10 +67,10 @@ yields **Tc**, which is the time constant of recovery: a number telling us the s
 <table>
   <tr>
     <td align="center">
-      <img src="https://raw.githubusercontent.com/fitgutlab/FitScope/main/www/Laser.jpg" height="300" alt="Laser probe setup on forearm" />
+      <img src="https://raw.githubusercontent.com/fitgutlab/FitScope/main/www/Cuff.jpg" height="300" alt="Occlusion cuff on thigh"/>
     </td>
     <td align="center">
-      <img src="https://raw.githubusercontent.com/fitgutlab/FitScope/main/www/Cuff.jpg" height="300" alt="Occlusion cuff on thigh" />
+      <img src="https://raw.githubusercontent.com/fitgutlab/FitScope/main/www/Laser.jpg" height="300" alt="Laser probe setup on forearm" />
     </td>
   </tr>
 </table>
