@@ -61,7 +61,7 @@ Each occlusion shows a slope representing mVO2, which, when plotted together, gi
 
 **mV̇O₂(t) = Rest + Delta · e^(−t/Tc)**
 
-yields **Tc**, which is the time constant of recovery: a number telling us the speed at which mVO2 falls back to resting levels post-exercise. Tc is tied to the **rate constant k=1/Tc**, meaning that **lower Tc/higher k values correspond to faster muscle recovery** (Ryan et al., 2014). Biologically, faster muscle recovery reflects greater mitochondrial respiratory capacity and higher metabolic flexability.
+Which yields **Tc**, which is the time constant of recovery: a number telling us the speed at which mVO2 falls back to resting levels post-exercise. Tc is tied to the **rate constant k=1/Tc**, meaning that **lower Tc/higher k values correspond to faster muscle recovery** (Ryan et al., 2014). Biologically, faster muscle recovery reflects greater mitochondrial respiratory capacity and higher metabolic flexability.
 
 ---
 <table>
