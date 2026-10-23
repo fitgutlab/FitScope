@@ -18,17 +18,24 @@ Primarily, the data results are not always physiologically reliable. There can b
 
 To address these challanges, we have developed FitScope, an open-source tool that will clean, analyze, and visualize raw NIRS data to estimate skeletal muscle mitochondrial oxidative capacity. FitScope automates the analytical process and can clean the data and perform blood-volume corrections all the way to estimating the rates of oxygen consumption, evaluating the reliability of the results, as well as fitting recovery curves. The two interfaces that we built that allow accessibility are an interactive R Shiny application and a Claude Code plugin. Researchers are able to upload raw data captured into the R Shiny app and visualize results without needing to write code. The Claude Code plugin allows the user to analyze their NIRS data by describing their desired tasks in simple everyday language instructions, it does not require users to even download RStudio or Visual Studio Code. Users just need to download their raw data and upload it to their Claude account.   
 
-## Research objective ------WE NEED TO REWRITE THIS: 
-Take a raw NIRS export from a repeated-occlusion recovery-kinetics
-protocol and produce a **trustworthy** Tc (and k) for each subject — the
-operative word being *trustworthy*, because, per above, a converged fit is
-not automatically one. The pipeline this repository ships was specified
-decision-by-decision by the lab's data owner (recorded in
-`data_cleaning_transcript.md` and `NIRS_Pipeline_Questions_and_Challenges.docx`),
-not derived or guessed at, and the two front ends below exist to run that
-exact pipeline without ever reimplementing it.
+## Research objective
 
 The overall aim of this study is to determine whether NIRS can provide a valid and trustworthy non-invasive estimate of skeletal muscle mitochondrial oxidative capacity in women with overweight or obesity. And to achieve that aim, we develop FitScope, an open-source tool that produces these estimates from raw NIRS data in a standardized way.
+
+Assess signal quality and feasibility.
+Determine whether usable NIRS signals can be obtained from the lateral (Rx1) and medial (Rx2) gastrocnemius of women aged 18–60 with a BMI of 25–40 kg/m². This will be quantified as the proportion of participants and probes that pass predefined quality-control criteria: Fit Factor, TSI%, resting-occlusion correlation, fit convergence, and R² threshold.
+
+Estimate mitochondrial oxidative capacity.
+Quantify the recovery time constant (Tc) and rate constant (k) for each participant by fitting a mono-exponential model to post-exercise mVO₂ recovery. These values will be compared between the lateral and medial probe sites and with published values from lean and healthy populations.
+
+Examine the influence of body composition.
+Determine whether BMI and subcutaneous adipose tissue thickness at the probe sites are associated with signal quality, with the rate of rejected fits, and with Tc and k values.
+
+Develop a standardized analysis pipeline.
+Build FitScope to carry out the lab's pre-specified processing steps on raw Oxysoft exports. These steps are data cleaning, blood-volume correction, occlusion identification, mVO₂ calculation per occlusion, and the recovery-curve fit. FitScope will offer two front ends, an R Shiny app and a Claude Code plugin, and both will run the same underlying scripts so that they produce identical outputs.
+
+Define criteria for a trustworthy fit.
+Establish and apply explicit rules that flag fits that converge mathematically but are not physiologically plausible.
 
 # Methodology 
 ## NIRS Overview
