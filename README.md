@@ -63,7 +63,18 @@ Each occlusion shows a slope representing mVO2, which, when plotted together, gi
 
 yields **Tc**, which is the time constant of recovery: a number telling us the speed at which mVO2 falls back to resting levels post-exercise. Tc is tied to the **rate constant k=1/Tc**, meaning that **lower Tc/higher k values correspond to faster muscle recovery** (Ryan et al., 2014). Biologically, faster muscle recovery reflects greater mitochondrial respiratory capacity and higher metabolic flexability.
 
-**PICTURE OF THE TEST**
+---
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://raw.githubusercontent.com/fitgutlab/FitScope/main/www/Laser.jpg" height="300" alt="Laser probe setup on forearm" />
+    </td>
+    <td align="center">
+      <img src="https://raw.githubusercontent.com/fitgutlab/FitScope/main/www/Cuff.jpg" height="300" alt="Occlusion cuff on thigh" />
+    </td>
+  </tr>
+</table>
+
 
 ## FitScope Tool  
 FitScope is an integrated tool of an R Shiny app and a Claude Code plugin for estimating **skeletal muscle
