@@ -28,14 +28,9 @@ Determine whether usable NIRS signals can be obtained from the lateral (Rx1) and
 2. Estimate mitochondrial oxidative capacity.
 Quantify the recovery time constant (Tc) and rate constant (k) for each participant by fitting a mono-exponential model to post-exercise mVO₂ recovery. These values will be compared between the lateral and medial probe sites and with published values from lean and healthy populations.
 
-3. Examine the influence of body composition.
-Determine whether BMI and subcutaneous adipose tissue thickness at the probe sites are associated with signal quality, with the rate of rejected fits, and with Tc and k values.
-
-4. Develop a standardized analysis pipeline.
+3. Develop a standardized analysis pipeline.
 Build FitScope to carry out the lab's pre-specified processing steps on raw Oxysoft exports. These steps are data cleaning, blood-volume correction, occlusion identification, mVO₂ calculation per occlusion, and the recovery-curve fit. FitScope will offer two front ends, an R Shiny app and a Claude Code plugin, and both will run the same underlying scripts so that they produce identical outputs.
 
-5. Define criteria for a trustworthy fit.
-Establish and apply explicit rules that flag fits that converge mathematically but are not physiologically plausible.
 
 # Methodology 
 ## NIRS Overview
