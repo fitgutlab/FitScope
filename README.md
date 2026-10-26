@@ -150,6 +150,8 @@ claude
 At Claude Code's `>` prompt:
 
 ```
+#run each code at a time in claude code
+
 /plugin marketplace add fitgutlab/FitScope
 /plugin install fitscope@fitgutlab
 ```
