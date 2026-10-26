@@ -1,5 +1,21 @@
 ![FitScope](app/www/fitscope-logo-dark.png)
 
+# Table of Contents
+
+- [Introduction](#introduction)
+- [Research Objective](#research-objective)
+- [Methodology](#methodology)
+  - [NIRS Overview](#nirs-overview)
+  - [NIRS Study Design](#nirs-study-design)
+- [FitScope Tool](#fitscope-tool)
+  - [Workflow of FitScope](#the-workflow-of-fitscope)
+  - [How to Use the Shiny App](#how-to-use-the-shiny-app)
+  - [How to Use the Claude Code Plugin](#how-to-use-the-claude-code-plugin)
+  - [Plots and Outputs](#plots-and-output-from-fitscope)
+- [Citation](#citation)
+- [References](#references)
+- [License](#license)
+
 # Introduction
 
 A key indicator of muscle health is skeletal muscle mitochondrial capacity; in other words, how quickly the muscle can use oxygen to regenerate ATP. Reduced oxidative capacity is directly linked to chronic health problems and poorer exercise performance (Maliszewski et al., 2024). Researchers typically measure this key marker from a muscle biopsy, an invasive procedure that requires a 1-2 centimeter incision, a needle, a trained clinician, and a specialized lab (Ross et al., 2023). After researchers take a tissue sample, they must chemically treat muscle fibers and examine them using high-resolution respirometry (e.g., Oroboros) while the tissue is fresh to analyze mitochondrial activity (Ryan et al., 2014). Another method for measuring mitochondrial oxidative capacity is phosphorus magnetic resonance spectroscopy (31P-MRS), a non-invasive option that requires an MRI machine. The need for an MRI scanner makes this method very costly and hard to access. Additionally, movement during measurements is challenging (Maliszewski et al., 2024).
