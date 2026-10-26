@@ -49,7 +49,7 @@ NIRS is a noninvasive way to measure mitochondrial function through hemoglobin/m
 
 ## NIRS Study Design  
 
-Our participant demographics are women aged 18-60 with a BMI of 25-40 kg/m2. Previous studies (Ryan et al., 2012; Ryan et al., 2014) have tested the viability of using NIRS as a substitute for muscle biopsies; however, we do not yet know whether NIRS is able to reliably capture mitochondrial efficiency in women with overweight or obesity, i.e., with distinct body fat compositions. The literature is heterogeneous, and adipose tissue may interfere with NIRS. 
+Our study's (IRB: NCR267336) participant demographics are women aged 18-60 with a BMI of 25-40 kg/m2. Previous studies (Ryan et al., 2012; Ryan et al., 2014) have tested the viability of using NIRS as a substitute for muscle biopsies; however, we do not yet know whether NIRS is able to reliably capture mitochondrial efficiency in women with overweight or obesity, i.e., with distinct body fat compositions. The literature is heterogeneous, and adipose tissue may interfere with NIRS. 
 
 NIRS is a straightforward procedure. We begin by having the participant lie down with legs extended and relaxed. We place the NIRS probes Rx1 and Rx2 on the thickest parts of the lateral (Rx1) and medial (Rx2) sides of the calf, and because they are highly light-sensitive, we wrap both probes in dark athletic tape. Placing the probes here yields a more reliable signal because more muscle is under the sensor and placement is more consistent (Ryan et al., 2012). We place a blood pressure cuff on the thigh of the same leg to briefly cut blood and oxygen flow to the sensors during the procedure.
 
