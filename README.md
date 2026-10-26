@@ -73,7 +73,7 @@ We start off the test with a two-minute resting measurement. We then inflate the
 
 After hemoglobin values return to baseline during reperfusion, the participant performs steady plantar flexions to a metronome pace of 60 bpm for 30 seconds. We again let all values return to baseline, then perform transient occlusions every 8 seconds via cuff inflation for 3 minutes. 
 
-Each occlusion shows a slope representing mVO2; plotted together, they give a picture of oxygen consumption through a decay curve. Fitting this curve with the equation
+Each occlusion shows a slope representing mVO2; plotted together, they give a picture of oxygen consumption through a decay curve. Fitting this curve with the equation:
 
 **mV̇O₂(t) = Rest + Delta · e^(−t/Tc)**
 
