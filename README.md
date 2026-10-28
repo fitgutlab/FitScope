@@ -124,9 +124,15 @@ cd FitScope
 #Install R dependencies - the pipeline scripts' packages plus the app's own
   R -e 'install.packages(c("shiny","DT","base64enc","readxl","dplyr","tidyr","readr","ggplot2","patchwork"))'
 
-#Launch the Shiny app
+#Launching the the Shiny app in the terminal
   cd app
   R -e 'shiny::runApp(".", launch.browser = TRUE)'
+
+#Launching the the Shiny app in R-studio or Positron
+#set working directory to where app.R file is
+ open the app.R file
+ run App
+# then upload the raw Oxysoft .xlsx export(Practice12.xlsx) and run the pipelines to clean,analyse and plot data.
 ```
 
 ### How to use the Claude Code Plugin
@@ -139,9 +145,10 @@ Claude Code needs to be installed in the Terminal or in an IDE (eg., Visual Stud
 | **Claude Code** | The CLI, desktop app, or VS Code/JetBrains extension. See [code.claude.com/docs](https://code.claude.com/docs). |
 
 #### 2. Open a Claude Code session
-It is important to locate the working directory  
+It is important to locate the working directory where the raw data files are. Download the sample data:("Practice12.xlsx or practice_4.xlsx") 
+from here to test the tool. 
 ```bash
-cd ~/path/to/your/study        # wherever your raw .xlsx exports live
+cd ~/path/to/your/test folder # wherever your raw Oxysoft .xlsx exports live, eg: thus where the "Practice12.xlsx" is. 
 claude
 ```
 
