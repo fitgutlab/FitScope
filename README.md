@@ -1,4 +1,4 @@
-![FitScope](app/www/fitscope-logo-dark.png)
+[FitScope](app/www/fitscope-logo-dark.png)
 
 # Table of Contents
 
